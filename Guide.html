@@ -201,4 +201,19 @@
     });
   }
 </script>
+<script>
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolled down
+        navbar.classList.add('navbar-scrolled');
+      } else {
+            // Scrolled up
+            navbar.classList.remove('navbar-scrolled');
+      }
+      lastScrollY = window.scrollY;
+    });
+</script>  
 </html>
