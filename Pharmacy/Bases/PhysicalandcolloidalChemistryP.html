@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+<!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Physical and Colloidal Chemistry</title>
+<link rel="stylesheet" href="teststyle.css">
+</head>
+
+
+    
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <nav class="navbar">
+    <a href="index.html" class="brand notranslate">KrokWorld</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <div class="nav-links">
+      <a href="../../index.html">Home</a>
+      <a href="../../Guide.html">Guide</a>
+      <a href="../../Contact.html">Contact us</a>
+    </div>
+  </nav>
+
+<h1>Physical and Colloidal Chemistry Quiz</h1>
+<div id="quiz" class="notranslate"></div>
+<button onclick="submitQuiz()">Submit</button>
+<p id="score"></p>
+
+<script>
+const questions = [
+    {
+        question: "What is the name of the process when droplets in emulsions spontaneously merge together?",
+        correct: "Coalescence",
+        incorrect: [
+            "Flocculation",
+            "Flotation",
+            "Sedimentation",
+            "Coagulation"
+        ]
+    },
+    {
+        question: "What is the name of the phenomenon when one drug enhances the effect of another?",
+        correct: "Synergism",
+        incorrect: [
+            "Withdrawal",
+            "Tachyphylaxis",
+            "Sensitization",
+            "Antagonism"
+        ]
+    },
+    {
+        question: "Colloidal protection is used in the manufacturing of medicinal products. Name the colloidal preparation of silver protected by proteins.",
+        correct: "Protargol",
+        incorrect: [
+            "Collagen",
+            "Enzymtal",
+            "Festal",
+            "Argentum"
+        ]
+    },
+    {
+        question: "How will the rate of the chemical reaction 2 NO(gas) + O2(gas) = 2NO2(gas) change if the pressure increases by three times?",
+        correct: "The rate will increase by 27 times",
+        incorrect: [
+            "The rate will decrease by three times",
+            "The rate will increase by three times",
+            "The rate will remain unchanged",
+            "The rate will decrease by 27 times"
+        ]
+    },
+    {
+        question: "Aerosols are one of the dosage forms. Name the phenomenon when aerosol particles move in the direction of decreasing temperature.",
+        correct: "Thermophoresis",
+        incorrect: [
+            "Photophoresis",
+            "Peptization",
+            "Sedimentation",
+            "Electrophoresis"
+        ]
+    },
+    {
+        question: "Extraction is often used in analysis of medicinal substances. In this method, the degree of extraction of the substance that is being determined depends on the following:",
+        correct: "Distribution coefficient",
+        incorrect: [
+            "Temperature",
+            "pH of the solution",
+            "The amount of the substance being extracted",
+            "The mass of the substance being extracted"
+        ]
+    },
+    {
+        question: "According to the Pharmacopoeia, molecular mass of a high-molecular substance must be determined using:",
+        correct: "Viscometry",
+        incorrect: [
+            "Cryometry",
+            "Nephelometry",
+            "Potentiometry",
+            "Osmometry"
+        ]
+    },
+    {
+        question: "What is the mechanism of action of a catalyst in a chemical reaction?",
+        correct: "Reduces activation energy",
+        incorrect: [
+            "Changes the nature of the reagents",
+            "Does not change the activation energy",
+            "Changes the degree of dispersion",
+            "Increases activation energy"
+        ]
+    },
+    {
+        question: "What changes occur with physical adsorption of substances, when temperature increases?",
+        correct: "Physical adsorption decreases",
+        incorrect: [
+            "Physical adsorption increases in homogeneous systems",
+            "Physical adsorption decreases in heterogeneous systems",
+            "Physical adsorption transforms into chemisorption",
+            "Physical adsorption increases"
+        ]
+    },
+    {
+        question: "How does the value of the critical micelle concentration in homologous series change with an increase in the molecular mass of the surfactant?",
+        correct: "Decreases",
+        incorrect: [
+            "Reaches its maximum and then decreases",
+            "Sharply increases",
+            "Increases",
+            "Remains unchanged"
+        ]
+    },
+    {
+        question: "What is the order of the kinetic equation that describes the process of coagulation according to the Smoluchowski theory of rapid coagulation?",
+        correct: "Second order",
+        incorrect: [
+            "Fractional order",
+            "Third order",
+            "First order",
+            "Zero order"
+        ]
+    },
+    {
+        question: "Calculation of the phase transformation temperature under varying pressure is of extreme practical importance to the modern pharmaceutical industry. This temperature can be calculated using the:",
+        correct: "Clausius-Clapeyron equation",
+        incorrect: [
+            "Gibbs phase rule",
+            "Konovalov rules",
+            "Mendeleev-Clapeyron equation",
+            "Trouton’s rule"
+        ]
+    },
+    {
+        question: "What will be the order of the reaction if one of the reagents participating in a bimolecular reaction was taken in a large excess?",
+        correct: "Pseudomonomolecular order",
+        incorrect: [
+            "The order can be determined based on the substance taken in excess",
+            "The order would be greater than the molecularity",
+            "Third order",
+            "The order would be the same as the molecularity"
+        ]
+    },
+    {
+        question: "Sedimentation is characteristic of the following type of systems:",
+        correct: "Suspensions",
+        incorrect: [
+            "Solutions of high-molecular compounds",
+            "Nonelectrolyte solutions",
+            "Foams",
+            "Electrolyte solutions"
+        ]
+    },
+    {
+        question: "Synthesis of a medicinal substance occurs in an isolated system. What is a direction criterion of spontaneous processes?",
+        correct: "Entropy change",
+        incorrect: [
+            "Gibbs energy",
+            "Helmholtz energy",
+            "Intrinsic energy",
+            "Enthalpy"
+        ]
+    },
+    {
+        question: "Dissociation degree in 0,01 M water solution is the same for all the strong electrolytes listed below. Name the substance with the highest boiling temperature of such solution:",
+        correct: "Al2(SO4)3",
+        incorrect: [
+            "KCl",
+            "Na3PO4",
+            "Cu(NO3)2",
+            "K3PO4"
+        ]
+    },
+    {
+        question: "Proteins are of great importance for vital functions. What value of pH results in zero electrophoretic mobility of gelatin (gelatin isoelectric point equals 4,7)?",
+        correct: "4,7",
+        incorrect: [
+            "7",
+            "14",
+            "5,5",
+            "9,4"
+        ]
+    },
+    {
+        question: "Enzymes are widely used as drugs in pharmacy. What is the main difference that separates enzymes from non-biological catalysts?",
+        correct: "High specificity and selectivity",
+        incorrect: [
+            "High universality",
+            "Low universality",
+            "High dispersion",
+            "High homogeneity"
+        ]
+    },
+    {
+        question: "Under isobaric-isothermal conditions the possibility and direction of spontaneous processes can be predicted through change of:",
+        correct: "Gibbs energy",
+        incorrect: [
+            "Helmholtz energy",
+            "Enthalpy",
+            "Entropy",
+            "Intrinsic energy"
+        ]
+    },
+    {
+        question: "Number of freedom degrees at the point of intersection of liquidus with Y-axis on the fusibility chart of a two-component system would equal:",
+        correct: "0",
+        incorrect: [
+            "2",
+            "3",
+            "4",
+            "1"
+        ]
+    },
+    {
+        question: "Surface tension is an important characteristic of a liquid. What substance has maximal surface tension?",
+        correct: "Water",
+        incorrect: [
+            "Ethanol",
+            "Benzene",
+            "Acetone",
+            "Chloroform"
+        ]
+    },
+    {
+        question: "Catalysts are widely used in production of drugs. How can reaction acceleration in the presence of a catalyst be explained?",
+        correct: "Activation energy decreases",
+        incorrect: [
+            "Total collision frequency increases",
+            "Activation energy increases",
+            "Collision frequency decreases",
+            "Molecule speed increases"
+        ]
+    },
+    {
+        question: "Formation enthalpy equals zero for the following substance:",
+        correct: "O2",
+        incorrect: [
+            "H2O2",
+            "H2SO4",
+            "CaCO3",
+            "O3"
+        ]
+    },
+    {
+        question: "At the triple point of the water phase diagram:",
+        correct: "f=0",
+        incorrect: [
+            "f=2",
+            "P=3; f=1",
+            "f=1",
+            "P=3; n=1"
+        ]
+    },
+    {
+        question: "Reaction rate constant of a hypothetical reaction is measured as s−1. What is the order of this reaction?",
+        correct: "First-order",
+        incorrect: [
+            "Zero-order",
+            "Second-order",
+            "Third-order",
+            "Fractional-order"
+        ]
+    },
+    {
+        question: "Among dosage forms there are numerous disperse systems. Specify the free disperse system:",
+        correct: "Emulsion",
+        incorrect: [
+            "Gel",
+            "Jelly",
+            "Diaphragm",
+            "Membrane"
+        ]
+    },
+    {
+        question: "Aqueous solution of the following substance will have the smallest surface tension, if all the listed solutions are taken in the same concentration:",
+        correct: "Sodium stearate",
+        incorrect: [
+            "Ethanol",
+            "Sodium chloride",
+            "Sodium hydroxide",
+            "Sucrose"
+        ]
+    },
+    {
+        question: "Wetting occurs when a drop of a liquid comes into contact with the surface of a solid substance. The degree of wetting is measured through:",
+        correct: "Contact angle",
+        incorrect: [
+            "Drop density",
+            "Surface tension",
+            "Drop size",
+            "Work of adhesion"
+        ]
+    },
+    {
+        question: "Isotonic glucose solution is widely used as a solvent or infusion medium for introduction of various drugs. What mass fraction is characteristic of this solution?",
+        correct: "5%",
+        incorrect: [
+            "10%",
+            "15%",
+            "20%",
+            "1%"
+        ]
+    },
+    {
+        question: "Treatment of a number of pathologic changes in human body is based on the peptization process, particularly disintegration of thrombi within blood vessels. The most important condition for efficient peptization can be determined as:",
+        correct: "Timely introduction of anticoagulant",
+        incorrect: [
+            "Introduction of excessive solvent",
+            "Ultrasound effect",
+            "Shaking",
+            "Heating"
+        ]
+    },
+    {
+        question: "Thermodynamic calculations allow us to determine the possibility and direction of spontaneous processes. In an isolated system the change of the following thermodynamic function is used for this purpose:",
+        correct: "Entropy",
+        incorrect: [
+            "Gibbs energy",
+            "Helmholtz energy",
+            "Internal energy",
+            "Enthalpy"
+        ]
+    },
+    {
+        question: "Reaction rate constant values allow to draw conclusions regarding processes of synthesis of various drugs. What factor affects reaction rate constant?",
+        correct: "Temperature",
+        incorrect: [
+            "Pressure",
+            "Volume",
+            "Concentration",
+            "Reaction time"
+        ]
+    },
+    {
+        question: "In terms of water-air interface the following substance is a surfactant:",
+        correct: "Valeric acid",
+        incorrect: [
+            "HCl",
+            "NaOH",
+            "Urea"
+        ]
+    },
+    {
+        question: "Aqueous solution of CaCl2 with 10% mass concentration is used for intravenous injections. What is the maximum value of isotonic coefficient of CaCl2 in an aqueous solution?",
+        correct: "3",
+        incorrect: [
+            "4",
+            "2",
+            "5",
+            "1"
+        ]
+    },
+    {
+        question: "According to van’t Hoff rule, when the temperature is raised by 10 degrees, the reaction rate increases by:",
+        correct: "2-4 times",
+        incorrect: [
+            "1,5 times",
+            "5 times",
+            "10 times"
+        ]
+    },
+    {
+        question: "If the amount of a high-molecular substance added to the sol is very small, it can not increase but decrease its stability. This phenomenon is called:",
+        correct: "Sensibilization",
+        incorrect: [
+            "Solubilization",
+            "Mutual coagulation",
+            "Colloidal protection",
+            "Sol adaptation"
+        ]
+    },
+    {
+        question: "Selective solvents are used in laboratories and factories to isolate and refine essential oils, alkaloids, antibiotics and other pharmaceutical substances. This process is called:",
+        correct: "Extraction",
+        incorrect: [
+            "Sedimentation",
+            "Coagulation",
+            "Flocculation",
+            "Flotation"
+        ]
+    },
+    {
+        question: "When preparing a solution, an analytical pharmacist converted a freshly formed precipitate into a sol by treating it with an electrolyte solution. What method of obtaining disperse systems was used by the pharmacist?",
+        correct: "Peptization",
+        incorrect: [
+            "Physical condensation",
+            "Chemical condensation",
+            "Solvent exchange",
+            "Condensation from steam"
+        ]
+    },
+    {
+        question: "Colloidal silver preparations Protargolum and Collargolum are widely used in medical practice as bactericidal drugs. In addition to the active ingredients, these drugs contain protein compounds. What is the function of proteins in these preparations?",
+        correct: "Prevention of colloidal solution coagulation",
+        incorrect: [
+            "Prolongation of shelf-life",
+            "Reduction of side effects",
+            "Improvement of drug technology",
+            "Potentiation of bactericidal action of silver"
+        ]
+    },
+    {
+        question: "Emulsions containing under 0,1% of dispersed phase (in volume) are classified as:",
+        correct: "Diluted",
+        incorrect: [
+            "Concentrated",
+            "High-concentration",
+            "Water-in-oil type",
+            "Oil-in-water type"
+        ]
+    },
+    {
+        question: "Removal of low-molecular impurities from colloidal systems and high-molecular compound solutions by means of semipermeable membrane diffusion is called:",
+        correct: "Dialysis",
+        incorrect: [
+            "Electrodialysis",
+            "Ultrafiltration",
+            "Decantation",
+            "Compensatory dialysis"
+        ]
+    },
+    {
+        question: "Blood contains erythrocytes with sizes of 10−6 m degree as its constituent parts. What type of disperse system is blood?",
+        correct: "Microheterogeneous",
+        incorrect: [
+            "Homogeneous",
+            "Coarse dispersion",
+            "Colloidal dispersion",
+            "Heterogeneous"
+        ]
+    },
+    {
+        question: "Upon increase of pressure the system’s chemical equilibrium will shift towards parent substances. Point out such a system:",
+        correct: "N2O4(gas) ↔ 2NO2(gas)",
+        incorrect: [
+            "C(solid) + O2(gas) ↔ CO2(gas)",
+            "4HCl(gas) + O2 ↔ 2H2O(gas) + 2Cl2(gas)",
+            "N2(gas) + 3H2(gas) ↔ 2NH3(gas)",
+            "CO2(gas) + H2(gas) ↔ CO(gas) + H2O(gas)"
+        ]
+    },
+    {
+        question: "What substance is not a surfactant at the water solution-air interface?",
+        correct: "Sodium chloride",
+        incorrect: [
+            "Acetic acid",
+            "Ethyl alcohol",
+            "Sodium stearate",
+            "Glucose"
+        ]
+    },
+    {
+        question: "A drop of oil-water emulsion had been applied to a plate cowered with paraffin; no wetting was observed. Such phenomenon characterizes this emulsion as:",
+        correct: "Direct",
+        incorrect: [
+            "Concentrated",
+            "Diluted",
+            "Stable",
+            "Invert"
+        ]
+    }
+];
+
+// Shuffle helper
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+let score = 0;
+
+function createQuiz() {
+  const quizDiv = document.getElementById('quiz');
+  quizDiv.innerHTML = '';
+  shuffle(questions).forEach((q, index) => {
+    const container = document.createElement('div');
+    container.className = 'question-container';
+    const qTitle = document.createElement('p');
+    qTitle.textContent = `${index + 1}. ${q.question}`;
+    container.appendChild(qTitle);
+
+    const answers = shuffle([q.correct, ...q.incorrect]);
+    answers.forEach(answer => {
+      const btn = document.createElement('div');
+      btn.className = 'answer';
+      btn.textContent = answer;
+      btn.addEventListener('click', () => {
+        const allAnswers = container.querySelectorAll('.answer');
+        allAnswers.forEach(a => {
+          a.classList.add('disabled');
+          if (a.textContent === q.correct) {
+            a.classList.add('correct');
+          }
+        });
+        if (answer === q.correct) {
+          score++;
+        } else {
+          btn.classList.add('wrong');
+        }
+      });
+      container.appendChild(btn);
+    });
+
+    quizDiv.appendChild(container);
+  });
+}
+
+function submitQuiz() {
+  document.getElementById('score').textContent = `Your score is ${score} out of ${questions.length}`;
+  // Disable all remaining unanswered
+  const allAnswers = document.querySelectorAll('.answer');
+  allAnswers.forEach(a => a.classList.add('disabled'));
+}
+
+createQuiz();
+</script>
+<script>
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolled down
+        navbar.classList.add('navbar-scrolled');
+      } else {
+            // Scrolled up
+            navbar.classList.remove('navbar-scrolled');
+      }
+      lastScrollY = window.scrollY;
+    });
+</script>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+
+
+
+

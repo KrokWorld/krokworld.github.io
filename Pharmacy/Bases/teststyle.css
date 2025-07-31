@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Consolas", sans-serif;
+    color: rgb(202, 202, 202);
+    list-style-type: none;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.navbar {
+    background-color: #0c0b0c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.brand {
+    color: #FFD700 !important;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 25px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0c0b0c;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+  
+}
+.navbar-scrolled {
+ background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(3px); /* The magic! This blurs the background */
+  -webkit-backdrop-filter: blur(3px); /* For Safari compatibility */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.9s ease; /* Optional: smooth transition */
+}
+
+
+.question-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.answer {
+  display: block;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.answer.correct {
+      background-color: #007e04 !important;
+      border-color: #00ff0d !important;
+}
+.answer.wrong {
+      background-color: #ff061f !important;
+      border-color: #ff9e9e !important;
+}
+.disabled {
+      pointer-events: none;
+      opacity: 0.6;
+}
+#score {
+      font-size: 20px;
+      font-weight: bold;
+}
+button {
+      margin-top: 20px;
+      padding: 10px 15px;
+}
