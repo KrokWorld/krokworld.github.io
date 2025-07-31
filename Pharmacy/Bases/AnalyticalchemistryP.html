@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+<!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Analytical Chemistry</title>
+<link rel="stylesheet" href="teststyle.css">
+</head>
+
+
+    
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+    <nav class="navbar">
+    <a href = "../../index.html" class="brand notranslate">KrokWorld</a>
+    <div class="nav-links">
+      <a href="../../index.html">Home</a>
+      <a href="../../Guide.html">Guide</a>
+      <a href="../../Contact.html">Contact us</a>
+    </div>
+  </nav>
+  </nav>
+
+<h1>Analytical Chemistry Quiz</h1>
+<div id="quiz" class="notranslate"></div>
+<button onclick="submitQuiz()">Submit</button>
+<p id="score"></p>
+
+<script>
+const questions = [
+     
+  {
+    question: "What two working solutions are used in determination of hydrogen sulfide in mineral waters by means of iodometry (back titration)?",
+    correct: "I2, Na2S2O3",
+    incorrect: [
+      "H2C2O4, KMnO4",
+      "AgNO3, H2SO4",
+      "NaOH, HCl",
+      "Na2CO3, HCI"
+    ]
+  },
+  {
+    question: "One of the classifications of titrimetric methods of analysis is based on the chemism of the reaction between the substance being analyzed and the titrant. What reaction is the basis for determining the amount of sodium carbonate using hydrochloric acid?",
+    correct: "Neutralization reaction",
+    incorrect: [
+      "Sedimentation reaction",
+      "Complexation reaction",
+      "Hydrolysis reaction",
+      "Redox reaction"
+    ]
+  },
+  {
+    question: "In the process of systematic analysis of a cation mixture, iron (III) cations can be determined using the fractional method. What reagent is used for this purpose?",
+    correct: "Potassium hexacyanoferrate (II)",
+    incorrect: [
+      "Hydrochloric acid",
+      "Sodium dihydrogen phosphate",
+      "Nitric acid",
+      "Potassium chloride"
+    ]
+  },
+  {
+    question: "What reaction must be conducted by an analytical chemist during the preliminary tests to determine chromium (III) ions?",
+    correct: "Reaction for formation of a perchromic acid after preliminary oxidation of chromium",
+    incorrect: [
+      "Reaction with sodium hydroxide and hydrogen peroxide",
+      "Reaction with sodium hydroxide",
+      "Reaction with ammonia",
+      "Reaction with potassium permanganate"
+    ]
+  },
+  {
+    question: "A potassium chromate solution was added into the solution being analyzed, which resulted in the formation of a yellow precipitate, soluble in acetic acid. What cations were present in the solution, as indicated by this qualitative reaction?",
+    correct: "Strontium cations",
+    incorrect: [
+      "Ammonium cations",
+      "Sodium cations",
+      "Magnesium cations",
+      "Potassium cations"
+    ]
+  },
+  {
+    question: "If an alkali is added into the solution being analyzed, the solution produces a gas when heated. This gas changes the color of a moist litmus paper from red to blue, which indicates the presence of the following in the solution:",
+    correct: "Ammonium ions",
+    incorrect: [
+      "Carbonate ions",
+      "Lead ions",
+      "Bismuth ions",
+      "Chloride ions"
+    ]
+  },
+  {
+    question: "What method of titrimetric analysis is used to quantify streptocide (sulfanilamide) with a KBrO3 solution in the presence of KBr?",
+    correct: "Bromatometry",
+    incorrect: [
+      "Dichromatometry",
+      "Vanadatometry",
+      "Iodometry",
+      "Permanganometry"
+    ]
+  },
+  {
+    question: "A 2M solution of HCl was added into the solution being analyzed, which resulted in formation of a white precipitate that turned black when processed with an ammonia solution. What cation is present in this solution?",
+    correct: "Hg2 2+",
+    incorrect: [
+      "Mg2+",
+      "Ag+",
+      "Ba2+",
+      "Pb2+"
+    ]
+  },
+  {
+    question: "What reactions and reagents under certain conditions allow the determination of certain ions in the presence of other ions?",
+    correct: "Specific",
+    incorrect: [
+      "General",
+      "Group",
+      "Selective",
+      "Characteristic"
+    ]
+  },
+  {
+    question: "What method is used for the quantification of medicinal substances with basic properties?",
+    correct: "Acidimetry",
+    incorrect: [
+      "Thiocyanatometry",
+      "Complexonometry",
+      "Permanganometry",
+      "Argentometry"
+    ]
+  },
+  {
+    question: "Ammoniacal buffer and 8- oxyquinoline solution were added into the solution containing cations of the fifth analytical group, which resulted in formation of a green-yellow precipitate. This qualitative reaction corresponds with the following cations:",
+    correct: "Magnesium cations",
+    incorrect: [
+      "Ammonium cations",
+      "Manganese cations",
+      "Iron (II) cations",
+      "Calcium cations"
+    ]
+  },
+  {
+    question: "What method is used for simultaneous elimination of the effect of foreign substances, concentration, and determination of concentration?",
+    correct: "Extraction-photometric analysis",
+    incorrect: [
+      "Fluorimetry",
+      "Polarimetry",
+      "Refractometry",
+      "Differential spectrophotometry"
+    ]
+  },
+  {
+    question: "Potentiometric methods of analysis are based on the use of:",
+    correct: "Dependence of the electromotive force (EMF) of a galvanic cell on the concentration of the analyte",
+    incorrect: [
+      "Dependence of the mass of the precipitate on the concentration of the analyte",
+      "A.   Dependence of the volume of the produced gas on the concentration of the analyte",
+      "Dependence of the electric current on the concentration of the analyte",
+      "Dependence of the volume of the titrant on the concentration of the analyte"
+    ]
+  },
+  {
+    question: "What titration method must be used for determination of a volatile substance?",
+    correct: "Back titration",
+    incorrect: [
+      "Direct titration",
+      "Substitution titration",
+      "Titration of separate sample weights",
+      "Titration with instrumental fixation of the equivalence point"
+    ]
+  },
+  {
+    question: "According to the Pharmacopoeia, molecular mass of a high-molecular substance must be determined using:",
+    correct: "Osmometry",
+    incorrect: [
+      "Cryometry",
+      "Nephelometry",
+      "Potentiometry",
+      "Viscometry"
+    ]
+  },
+  {
+    question: "What potential forms at the interface between two solutions?",
+    correct: "Diffusion potential",
+    incorrect: [
+      "Electrokinetic potential",
+      "Contact potential",
+      "Electrode potential",
+      "Surface potential"
+    ]
+  },
+  {
+    question: "What substance is used as a primary standard in permanganometry, bromatometry, dichromatometry, iodometry, and cerimetry?",
+    correct: "Arsenic (III) oxide",
+    incorrect: [
+      "Potassium hydroxide",
+      "Sodium chloride",
+      "Sodium carbonate",
+      "Ammonium acetate"
+    ]
+  },
+  {
+    question: "What parameter is measured during conductometric titration of electrolyte solutions?",
+    correct: "Electrical conductivity",
+    incorrect: [
+      "Acidity of the environment",
+      "Concentration of the solution",
+      "Viscosity of the solution",
+      "Electromotive force"
+    ]
+  },
+  {
+    question: "Quantitative determination of copper salts by photometry must be conducted according to the calibration graph that is built within the following coordinates:",
+    correct: "Optical density — concentration",
+    incorrect: [
+      "Light absorption intensity — wavelength",
+      "Optical density — temperature",
+      "Optical density — liquid layer thickness",
+      "Optical density — wavelength"
+    ]
+  },
+  {
+    question: "What indicator is necessary for titration of a potassium iodide solution using a silver nitrate solution (direct titration)?",
+    correct: "Fluorescein",
+    incorrect: [
+      "Starch solution",
+      "Methyl orange",
+      "Ammonium iron(III) sulfate",
+      "Tropeolin 00"
+    ]
+  },
+  {
+    question: "An analytical laboratory expert performs direct iodometric determination of ascorbic acid. What indicator must be used in this case?",
+    correct: "Starch",
+    incorrect: [
+      "Diphenylamine",
+      "Methyl red",
+      "Phenolphthalein",
+      "Methyl orange"
+    ]
+  },
+  {
+    question: "What is the color of the compound that forms as a result of reaction between salicylate ions and Fe3+ ions in an acidic environment?",
+    correct: "Violet",
+    incorrect: [
+      "Green",
+      "Blue",
+      "Black",
+      "Brown"
+    ]
+  },
+  {
+    question: "Polarography is one of the electrochemical methods of analysis. What parameter is used in polarographic analysis to identify the substance being analyzed?",
+    correct: "Half-wave potential",
+    incorrect: [
+      "Magnitude of the electromotive force",
+      "Height of a polarographic wave",
+      "Width of a polarographic wave",
+      "Position of a polarographic wave"
+    ]
+  },
+  {
+    question: "Bouguer-Lambert-Beer law is the basis of molecular absorption analysis. According to this law, optical density of a solution is:",
+    correct: "Directly proportional to layer thi-ckness and concentration of a substance",
+    incorrect: [
+      "Directly proportional to layer thi-ckness and absorption coefficient",
+      "Inversely proportional to layer thi-ckness and concentration of a substance",
+      "Directly proportional to concentration and inversely proportional to layer thi-ckness",
+      "Directly proportional to concentration and inversely proportional to absorption coefficient"
+    ]
+  },
+  {
+    question: "To determine mass fraction of sodium chloride in a drug, the Fajans method should be applied. Titration is to be performed in the presence of the following indicator solution:",
+    correct: "Fluorescein",
+    incorrect: [
+      "Methyl red",
+      "Potassium chromate",
+      "Ammonium iron (III) sulfate",
+      "Phenolphthalein"
+    ]
+  },
+  {
+    question: "Sulfanilamidedrugscontainprimaryaromaticamides intheir structure.Specifythemethodofquantitative determi-nation of these compounds:",
+    correct: "Nitritometry",
+    incorrect: [
+      "Iodometry",
+      "Dichromatometry",
+      "Permanganatometry",
+      "Cerimetry"
+    ]
+  },
+  {
+    question: "Chloroformandsodiumnitritesolutionwereaddedintotheacidulous investigatedsolution.Thechloroform layer colored red-violet, which indicates the presence of:",
+    correct: "Iodide ions",
+    incorrect: [
+      "Carbonate ions",
+      "Chloride ions",
+      "Sulfate ions",
+      "Fluoride ions"
+    ]
+  },
+  {
+    question: "Dryresiduereceivedafterevaporationof the investigatedsolutionturnspreviouslycolorlessburner flame yellow, which is observed as violet through blue glass. What cations are there in the dry residue?",
+    correct: "Na+, K+",
+    incorrect: [
+      "Na2+, K+",
+      "Na+ , Sr2+",
+      "Li+, Ba2+",
+      "Na+, Ca2+"
+    ]
+  },
+  {
+    question: "Investigated solutioncontains potassiumand ammoniumions. Specify the reagent that can indicate the presence of potassium ions in this solution:",
+    correct: "Potassium tetraiodomercurate",
+    incorrect: [
+      "Sodium chloride",
+      "Sodium acetate",
+      "Potassium hexacyanoferrate (II)",
+      "Uranyl zinc acetate"
+    ]
+  },
+  {
+    question: "Intheprocessofqualitativeanalysis todeterminestrontiumions, so-called”gypseouswater”isused.This substance can be defined as:",
+    correct: "Concentrated aqueous solution of CaSO4",
+    incorrect: [
+      "Solution of Ca(OH)2",
+      "Concentrated aqueous solution of CO2",
+      "Aqueous solution of Ba(NO3)2",
+      "solution of AgNO3"
+    ]
+  },
+  {
+    question: "What standard solution can be used to standardize the solution of I2?",
+    correct: "Sodium thiosulfate solution",
+    incorrect: [
+      "Potassium iodide solution",
+      "Potassium dichromate solution",
+      "Potassium permanganate solution",
+      "Sodium nitrite solution"
+    ]
+  },
+  {
+    question: "Pharmacopoeia reaction to determi-ne benzoate ions requires interaction wi-th the solution of:",
+    correct: "Iron (III) chloride",
+    incorrect: [
+      "Potassium chloride",
+      "Resorcin",
+      "Acetic anhydride",
+      "Diphenylamine"
+    ]
+  },
+  {
+    question: "Choose the indicator and titration method to determine hydrogen carbonate ions in a drug:",
+    correct: "Methyl-orange, acidimetry",
+    incorrect: [
+      "Phenolphthalein, acidimetry",
+      "Methyl-orange, alkalimetry",
+      "Phenolphthalein, alkalimetry",
+      "Murexide, acidimetry"
+    ]
+  },
+  {
+    question: "Pharmacopoeia reaction todetermi-nephosphate ions is a reactionwithmagnesiamixture. It results in producti-on of white crystalline precipitate gN H4P O4. Magnesia mixture consists of the following:",
+    correct: "MgCl2, NH3 · H2O, NH4Cl",
+    incorrect: [
+      "MgCl2, NaOH, NaCl",
+      "MnCl2, NH3 · H2O, NaCl",
+      "MgCl2, MnSO4, NH4Cl",
+      "MgCl2, NH4Cl"
+    ]
+  },
+  {
+    question: "Name the mercurimetry titrant:",
+    correct: "0,1 М solution of Hg2(NO3)2",
+    incorrect: [
+      "0,1 М solution of NaNO2",
+      "0,1 М solution of AgNO3",
+      "0,1 М solution of KSCN",
+      "0,1 М solution of NH4SCN"
+    ]
+  },
+  {
+    question: "Whatcationofthe4thanalyticalgroupispresent inasolution, ifitsreacti-onwiththegroupreagentresults in formation of yellow precipitate?",
+    correct: "Cr3+",
+    incorrect: [
+      "Zn2+",
+      "Sn2+",
+      "Al3+",
+      "Sn(IV)"
+    ]
+  },
+  {
+    question: "Direct titrationCANNOTbe applied for quantitative determinati-on of calciumchloride bymeans of permanganatometry, because:",
+    correct: "The investigated substance does not interact with the titrant",
+    incorrect: [
+      "The reaction runs very quickly",
+      "It is impossible to select the indicator to determine titration end point",
+      "Side reactions are possible",
+      "The reaction runs slowly"
+    ]
+  },
+  {
+    question: "Duringmercurimetrictitrationofhalogenideions inthepresenceofdi-phenylcarbazone,at thetitrationend point the precipitate is produced. This precipitate will be colored:",
+    correct: "Blue",
+    incorrect: [
+      "Red",
+      "Yellow",
+      "Green",
+      "Brown"
+    ]
+  },
+  {
+    question: "When determining oxidizing agents bymeans of iodometry in the presence of starch the following phenomenon can be observed at the titration end point:",
+    correct: "Blue coloring disappears",
+    incorrect: [
+      "Red coloring appears",
+      "Green coloring of precipitate appears",
+      "Green coloring of solution disappears",
+      "White precipitate occurs"
+    ]
+  },
+  {
+    question: "Hydrochloricacidwasaddedintothesolutionunderinvestigation.Theresultingprecipitatewasfiltered, then thisfiltercakewasprocessedwithhotwater;after thefiltratecooled,KI soluti-onwasaddedintoit.What cation was present in the solution, if the precipitate was colored yellow?",
+    correct: "Pb2+",
+    incorrect: [
+      "Ag+",
+      "Hg2+",
+      "Ca2+",
+      "Ba2+"
+    ]
+  },
+  {
+    question: "Whencationsaredividedintoanalyticalgroupsaccordingtotheacid-baseclassification,groupreagentscan be acids or bases. What acids can be used as group reagents?",
+    correct: "HCI, H2SO4",
+    incorrect: [
+      "HNO3, CH3COOH",
+      "H3PO4, H2C2O4",
+      "HCIO4",
+      "H2CO3"
+    ]
+  },
+  {
+    question: "The thirdanalitycal groupof cations (acid-baseclassification) includesCa2+, Sr2+,Ba2+.What acidcan function as a precipitator agent (group reagent) for these cations?",
+    correct: "H2SO4",
+    incorrect: [
+      "HNO3",
+      "HCI",
+      "CH3COOH",
+      "HCIO4"
+    ]
+  }
+];
+
+// Shuffle helper
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+let score = 0;
+
+function createQuiz() {
+  const quizDiv = document.getElementById('quiz');
+  quizDiv.innerHTML = '';
+  shuffle(questions).forEach((q, index) => {
+    const container = document.createElement('div');
+    container.className = 'question-container';
+    const qTitle = document.createElement('p');
+    qTitle.textContent = `${index + 1}. ${q.question}`;
+    container.appendChild(qTitle);
+
+    const answers = shuffle([q.correct, ...q.incorrect]);
+    answers.forEach(answer => {
+      const btn = document.createElement('div');
+      btn.className = 'answer';
+      btn.textContent = answer;
+      btn.addEventListener('click', () => {
+        const allAnswers = container.querySelectorAll('.answer');
+        allAnswers.forEach(a => {
+          a.classList.add('disabled');
+          if (a.textContent === q.correct) {
+            a.classList.add('correct');
+          }
+        });
+        if (answer === q.correct) {
+          score++;
+        } else {
+          btn.classList.add('wrong');
+        }
+      });
+      container.appendChild(btn);
+    });
+
+    quizDiv.appendChild(container);
+  });
+}
+
+function submitQuiz() {
+  document.getElementById('score').textContent = `Your score is ${score} out of ${questions.length}`;
+  // Disable all remaining unanswered
+  const allAnswers = document.querySelectorAll('.answer');
+  allAnswers.forEach(a => a.classList.add('disabled'));
+}
+
+createQuiz();
+</script>
+<script>
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolled down
+        navbar.classList.add('navbar-scrolled');
+      } else {
+            // Scrolled up
+            navbar.classList.remove('navbar-scrolled');
+      }
+      lastScrollY = window.scrollY;
+    });
+</script>
+
+</body>
+</html>

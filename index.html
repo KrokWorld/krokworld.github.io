@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+<!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Krok World</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.content a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.content a:hover {
+    background-color: #ddd;
+}
+
+
+.Maintitle
+{
+  text-align: center;
+}
+
+
+
+
+</style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar">
+    <a href = "index.html" class="brand notranslate">KrokWorld</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Guide.html">Guide</a>
+      <a href="Contact.html">Contact us</a>
+    </div>
+  </nav>
+  </nav>
+  <button type="button" class="collapsible">Pharmacy</button>
+    <div class="content">
+      <button type="button" class="collapsible">Bases</button>
+        <div class="content">
+          <a href="Pharmacy/Bases/BiochemistryP.html">Biochemistry Bases</a>
+          <a href="Pharmacy/Bases/BotanyP.html">Botany Bases</a>
+          <a href="Pharmacy/Bases/MicrobiologyP.html">Microbiology Bases</a>
+          <a href="Pharmacy/Bases/PharmacologyP.html">Pharmacology Bases</a>
+          <a href="Pharmacy/Bases/PathophisiologyP.html">Pathophisiology Bases</a>
+          <a href="Pharmacy/Bases/PhysicalandcolloidalChemistryP.html">Physical and Colloidal Bases</a>
+    </div>
+          <button type="button" class="collapsible">Krok</button>
+        <div class="content">
+          <a href="">Krok 2000</a>
+    </div>
+    </div>
+
+
+
+  <button type="button" class="collapsible">Medicine</button>
+    <div>
+
+    </div>
+
+
+
+
+  <button type="button" class="collapsible">Dentist</button>
+    <div>
+      
+    </div>
+
+
+</body>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</html>
