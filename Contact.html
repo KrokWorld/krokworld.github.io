@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VD1VSYT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V5VD1VSYT5');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body data-theme="dark"> <!-- Default theme is dark -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar">
+        <a href="index.html" class="brand notranslate">KrokWorld</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Guide.html">Guide</a>
+            <a href="Contact.html">Contact us</a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+<div class="main-content">
+  <main>
+
+    <h2 style="color: #0080ff;">Contact Us</h2>
+    <p>EMAIL: krokcorp@gmail.com</p>
+    <p>Contact us if your having any difficulties with the website.</p>
+    <p>Or you want to see a specific test added.</p>
+    <p>Don't forget to follow our socials for updates.</p>
+
+
+
+  </main>
+</div>
+
+<script>
+    // --- Collapsible Script ---
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+
+            if (content.style.maxHeight) {
+                // To close the collapsible and all its open children
+                content.style.maxHeight = null;
+            } else {
+                // To open the collapsible, calculate its own scrollHeight
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+            // --- Update parent collapsibles' height ---
+            // This part ensures that when a nested collapsible is opened/closed,
+            // its parent's maxHeight is adjusted to fit the new total height.
+            let parent = this.parentElement.closest('.content');
+            while (parent) {
+                // Recalculate the parent's scrollHeight plus the maxHeight of its open children
+                let newMaxHeight = parent.scrollHeight;
+                let openChildren = parent.querySelectorAll('.content');
+                openChildren.forEach(child => {
+                    if (child.style.maxHeight) {
+                        // The scrollHeight of the child itself is already part of the parent's scrollHeight
+                        // We just need to add its content's height
+                        newMaxHeight += parseInt(child.style.maxHeight.replace("px", ""));
+                    }
+                });
+
+                parent.style.maxHeight = newMaxHeight + 'px';
+                parent = parent.parentElement.closest('.content');
+            }
+        });
+    }
+
+
+    // --- Navbar Scroll Script ---
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > navbar.clientHeight) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+
+    // --- Theme Switcher Script ---
+    const themeSwitch = document.querySelector('#checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    // Set default theme to 'dark' if none is stored
+    if (!currentTheme) {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'light') {
+            themeSwitch.checked = true;
+        }
+    }
+
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    themeSwitch.addEventListener('change', switchTheme, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VD1VSYT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V5VD1VSYT5');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Biochemistry</title>
+    <link rel="stylesheet" href="teststyle.css">
+</head>
+<body data-theme="dark"> <!-- Default theme is dark -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar">
+        <a href="../../index.html" class="brand notranslate">KrokWorld</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../Guide.html">Guide</a>
+            <a href="../../Contact.html">Contact us</a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Biochemistry Quiz</h1>
+        <div id="quiz" class="notranslate"></div>
+        <button onclick="submitQuiz()" class="collapsible">Submit</button>
+        <p id="score"></p>
+    </div>
+
+<script>
+    // --- Theme Switcher Script ---
+    const themeSwitch = document.querySelector('#checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (!currentTheme) {
+        localStorage.setItem('theme', 'dark');
+        document.body.setAttribute('data-theme', 'dark');
+    } else {
+        document.body.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'light') {
+            themeSwitch.checked = true;
+        }
+    }
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    themeSwitch.addEventListener('change', switchTheme, false);
+
+    // --- Navbar Scroll Script ---
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > navbar.clientHeight) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+    // --- Quiz Script ---
+    const questions = [
+  {
+    question: "55-year-old man came to a doctor with complaints of acute pain in his big toes Meat and wine are a permanent fixture in his diet The doctor suspects gout What substance must be measured in the patient’s blood to confirm this diagnosis?",
+    correct: "Uric acid",
+    incorrect: ["Urea", "Lactate", "Bilirubin","Ketone bodies"]
+  },
+  {
+    question: "Generation of primary urine in kidneys is induced by filtration in renal corpuscles. What components of blood plasma are absent in the primary urine",
+    correct: "Proteins",
+    incorrect: ["Amino acids", "Glucose", "Urea", "Ions"]
+  },
+  {
+    question: "A 12-year-old boy is of short stature but his mental development corresponds with that of his age group What hormone deficiency is the most likely to cause this pathology?",
+    correct: "Somatotropin",
+    incorrect: ["Insulin", "Oxytocin", "Vasopressin", "Adrenaline"]
+  },
+
+  {
+    question: "A 28-year-old male got a burn that caused an increase in spontaneous secretion of gastric juice It is associated with secretion of the following substance",
+    correct: "Histamine",
+    incorrect: ["Secretin", "Gastric inhibitory peptide", "Cholecystokinin-Pancreozymin", "Serotonin"]
+  },
+  {
+    question: "A 40-year-old male presented to the endocrinology department with disproportionate enlargement of limbs mandible and nose These manifestations are caused by the overproduction of the following hormone",
+    correct: "Somatostatin",
+    incorrect: ["Corticotropin", "Aldosterone", "Adrenaline", "Vasopressin"]
+  },
+  {
+    question: "A 40-year-old patient has developed polyuria 10-12 liters per day and polydipsia induced by damage to the hypothalamo-hypophyseal tract What hormone deficiency causes such disorders",
+    correct: "Vasopressin",
+    incorrect: ["Oxytocin", "Corticotropin", "Somatotropin", "Thyrotropin"]
+  },
+  {
+    question: "A 5-year-old child presents with abdominal distension abdominal cramps and diarrhea occurring 1-4 hours after drinking milk Described symptoms are caused by the lack of enzymes that break up",
+    correct: "Lactose",
+    incorrect: ["Glucose", "Maltose", "Saccharose","Fructose"]
+  },
+  {
+    question: "A 56-year-old patient complains about limitation of movements and pain in hand joints mainly at night Objectively there is a disfiguring painful swelling of affected joints Blood and urine have high concentration of uric acid What disease has developed",
+    correct: "Gout",
+    incorrect: ["Pellagra", "Phenylketonuria", "Alkaptonuria", "Tyrosinosis"]
+  },
+  {
+    question: "A 70-year-old patient has been found to have atherosclerosis of heart and brain vessels Examination revealed the changes in the lipid profile Pathogenesis of atherosclerosis is greatly influenced by an increase in the following lipoproteins rate",
+    correct: "Low-density lipoprotein",
+    incorrect: ["Very-low-density lipoproteins", "Intermediate-density lipoproteins", "High-density lipoprotein", "Chylomicrons"]
+  },
+  {
+    question: "A child with PKU has an unpleasant mouse-like odor growth retardation and mental retardation These symptoms are associated with the high concentration of the following substance in blood?",
+    correct: "Phenylpyruvic acid",
+    incorrect: ["Glucose", "Cholesterol", "Adrenaline", "Uric acid"]
+  },
+  {
+    question: "A child with rickets presents with leg deformities and skeletal malformations Which vitamin deficiency is the most likely cause",
+    correct: "Vitamin D",
+    incorrect: ["Vitamin A", "Vitamin C", "Vitamin K", "Vitamin E"]
+  },
+  {
+    question: "A drug which inhibits ATP synthesis in a cell has been used during an experiment What type of transmembrane transport will be disturbed",
+    correct: "Active",
+    incorrect: ["Diffusion", "Osmosis", "Filtration", "Facilitated diffusion"]
+  },
+  {
+    question: "A male patient was found to have hypovitaminosis PP What amino acid taken with food may partially compensate the vitamin PP deficiency",
+    correct: "Indole",
+    incorrect: ["Bilirubin", "Lactate", "Creatine","Glucose"]
+  },
+  {
+    question: "A man developed high plasma iron levels due to intensified hemolysis of erythrocytes What plasma protein transports iron",
+    correct: "Lipase",
+    incorrect: ["Interferon", "Ceruloplasmin", "Albumin", "Histone"]
+  },
+  {
+    question: "A parturient woman diagnosed with uterine inertia has been delivered to the maternity ward The doctor gave her an injection of the drug that activates the contraction of smooth muscles of the uterus What hormone is a component of this drug",
+    correct: "Oxytocin",
+    incorrect: ["Gastrin", "Secretin", "Angiotensin", "Bradykinin"]
+  },
+  {
+    question: "A patient complains about an increase in heart rate hyperperspiration irritability and sleeplessness He has been presenting with these symptoms for the latest six months They indicate the hyperfunction of the following endocrine gland",
+    correct: "Thyroid gland",
+    incorrect: ["Pancreas", "Adrenal glands", "Sexual glands", "Thymus"]
+  },
+  {
+    question: "A patient complains of general weakness dyspnea and palpitation Examination revealed inflammation of the mucous membrane of the tongue lips especially in the corners of the mouth; inflammation and increased vascularization in the external membrane of the eye What is the likely cause of this pathological condition?",
+    correct: "Hypovitaminosis B2",
+    incorrect: ["Hypovitaminosis B1", "Hypovitaminosis A", "Hypovitaminosis C", "Hypervitaminosis A"]
+  },
+  {
+    question: "A patient complains of pain in the small joints High concentration of uric acid is detected in his blood plasma What pathology causes such changes?",
+    correct: "Gout",
+    incorrect: ["Diabetes mellitus", "Phenylketonuria", "Lesch-Nyhan syndrome", "Diabetes insipidus"]
+  },
+  {
+    question: "A patient complains of polyuria. Urine test detects no pathologic components, but urine specific gravity is abnormally low. What hormone secretion is likely to be disturbed in this patient?",
+    correct: "Vasopressin",
+    incorrect: ["Somatotropin", "Thyrotropin", "Insulin", "Cortisol"]
+  },
+  {
+    question: "A patient complains of weakness and increasing irritability On examination there is tachycardia and tremors of the fingers The reason for these symptoms is hyperfunction of the following organ?",
+    correct: "Thyroid gland",
+    incorrect: ["Thymus", "Pancreas", "Adrenal glands", "Sexual glands"]
+  },
+  {
+    question: "A patient consulted a doctor about intolerance to the sun's rays He presents with skin burns and impaired vision He has been diagnosed with albinism It is caused by the deficiency of the following enzyme?",
+    correct: "Tyrosinase",
+    incorrect: ["Ornithine carbamoyl transferase", "Arginase", "DOPA-oxidase",]
+  },
+  {
+    question: "A patient consulted a doctor about sunburns decreased visual acuity His hair skin and eyes are not pigmented He has been diagnosed with albinism The patient presents with the following enzyme deficiency?",
+    correct: "Tyrosinases",
+    incorrect: ["Arginase", "Carbonic anhydrase", "Histidine decarboxylase","Hexokinase"]
+  },
+  {
+    question: "A patient demonstrates a milky-white color of blood plasma due to high content of chylomicrons Disintegration of triacylglycerol is disrupted Deficiency of the following enzyme activity is observed?",
+    correct: "Lipoprotein lipase",
+    incorrect: ["Amylase", "Trypsin", "Cholesterol esterase","Lactase"]
+  },
+  {
+    question: "A patient has a gallstone lodged in the common bile duct which blocks bile supply to the intestine What digestive process will be disturbed in this case?",
+    correct: "Fat digestion",
+    incorrect: ["Protein absorption", "Carbohydrate digestion", "Carbohydrate absorption","Protein digestion"]
+  },
+  {
+    question: "A patient has a mental disorder due to the insufficient synthesis of gamma-aminobutyric acid in the brain Such pathological changes might be caused by the deficiency of the following vitamin?",
+    correct: "Pyridoxine",
+    incorrect: ["Tocopherol", "Cyanocobalamin", "Folic acid","Riboflavin"]
+  },
+  {
+    question: "A patient has an increased concentration of hippuric acid in the urine This acid is the product of benzoic acid detoxification in the liver In the human body benzoic acid is formed from the following amino acid",
+    correct: "Phenylalanine",
+    incorrect: ["Succinate", "Lactate", "Aspartate","Malate"]
+  },
+  {
+    question: "A patient has high concentration of chylomicrons in blood especially after taking fatty food He also has type I hyperlipoproteinemia resulting from the deficiency of the following enzyme?",
+    correct: "Lipoprotein lipase",
+    incorrect: ["Adenylate cyclase", "Protein kinase", "Phospholipase C","Prostaglandin synthetase"]
+  },
+  {
+    question: "A patient has been administered L-carnitine This preparation ensures transmembrane transfer of the following substances?",
+    correct: "Higher fatty acids",
+    incorrect: ["Amino acids", "Purine nucleotides", "Pyrimidine nucleotides","Glucose"]
+  },
+  {
+    question: "A patient has impaired mesopic vision but his photopic vision is normal What is the probable cause of such vision anomaly?",
+    correct: "Vitamin A deficiency",
+    incorrect: ["Hyperopia", "Cones dysfunction", "Myopia","Vitamin D deficiency"]
+  },
+  {
+    question: "A patient has neurasthenic syndrome diarrhea and dermatitis This is associated with deficiency of the following vitamin",
+    correct: "Nicotinic acid",
+    incorrect: ["Vitamin K", "Vitamin D", "Folic acid","Vitamin B12"]
+  },
+  {
+    question: "A patient ill with pheochromocytoma has high secretion of the following hormone?",
+    correct: "Adrenaline",
+    incorrect: ["Glucagon", "Insulin", "Thyroxin","Somatotropin"]
+  },
+  {
+    question: "A patient is 50 years old As a result of continuous improper diet he has developed hypovitaminosis C Lesion of connective tissue is caused by low activity of the following enzyme?",
+    correct: "Proline hydroxylase",
+    incorrect: ["Alanine aminotransferase", "Pyruvate carboxylase", "Tryptophan hydroxylase","Glutaminase"]
+  },
+  {
+    question: "A patient is diagnosed with acute pancreatitis For diagnostic purposes it is necessary to measure the activity of the following enzyme in the patient’s blood?",
+    correct: "Amylase",
+    incorrect: ["Aldolase", "LDH", "Creatine kinase","Pepsin"]
+  },
+  {
+    question: "A patient looks pale and complains of headache pain in the heart and attacks of tachycardia and hypertension Blood biochemistry test detects significantly increased levels of catecholamines What gland is affected?",
+    correct: "Adrenal medulla",
+    incorrect: ["Adenohypophysis", "Neurohypophysis", "Parathyroid glands","Adrenal cortex"]
+  },
+  {
+    question: "A patient presents with decreased secretory function of the stomach which is accompanied by anemia What vitamin has anti-anemic action?",
+    correct: "Cobalamin",
+    incorrect: ["nicotinic acid", "retinol", "Lamiaceae","thiamine"]
+  },
+  {
+    question: "A patient presents with weakening of the inhibitory processes of the CNS which is associated with disturbed production of gamma-aminobutyric acid or GABA What substance is the GABA precursor?",
+    correct: "Nicotinic acid",
+    incorrect: ["Vitamin K", "Vitamin D", "Tocopherol","Retinol"]
+  },
+  {
+    question: "A patient underwent an operation After it he was prescribed glycosaminoglycan that has coagulating action Specify this substance?",
+    correct: "Heparin",
+    incorrect: ["Keratan sulfate", "Hyaluronic acid", "Chondroitin-6-sulfate","Chondroitin-4-sulfate"]
+  },
+  {
+    question: "A patient was diagnosed with anacydic gastritis What enzyme activity will be reduced?",
+    correct: "Pepsin",
+    incorrect: ["Amylase", "Lipase", "Chymotrypsin","Trypsin"]
+  },
+  {
+    question: "A patient was prescribed a bile preparation for better digestion of fatty food What components of this preparation cause fat emulsification?",
+    correct: "Bile acids",
+    incorrect: ["Bilirubin glucuronids", "Bile pigments", "Cholesterol and its ethers", "Diglycerides"]
+  },
+  {
+    question: "A patient was found to have an increased blood serum LDH-1 activity In which organ is the pathological process localized",
+    correct: "Heart",
+    incorrect: ["Liver", "Kidneys", "Stomach","Muscles"]
+  }
+    ];
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    let score = 0;
+
+    function createQuiz() {
+      const quizDiv = document.getElementById('quiz');
+      quizDiv.innerHTML = '';
+      shuffle(questions).forEach((q, index) => {
+        const container = document.createElement('div');
+        container.className = 'question-container';
+        const qTitle = document.createElement('p');
+        qTitle.textContent = `${index + 1}. ${q.question}`;
+        container.appendChild(qTitle);
+
+        const answers = shuffle([q.correct, ...q.incorrect]);
+        answers.forEach(answer => {
+          const btn = document.createElement('div');
+          btn.className = 'answer';
+          btn.textContent = answer;
+          btn.addEventListener('click', () => {
+            const allAnswers = container.querySelectorAll('.answer');
+            allAnswers.forEach(a => {
+              a.classList.add('disabled');
+              if (a.textContent === q.correct) {
+                a.classList.add('correct');
+              }
+            });
+            if (answer === q.correct) {
+              score++;
+            } else {
+              btn.classList.add('wrong');
+            }
+          });
+          container.appendChild(btn);
+        });
+
+        quizDiv.appendChild(container);
+      });
+    }
+
+    function submitQuiz() {
+      document.getElementById('score').textContent = `Your score is ${score} out of ${questions.length}`;
+      const allAnswers = document.querySelectorAll('.answer');
+      allAnswers.forEach(a => a.classList.add('disabled'));
+    }
+
+    createQuiz();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
