@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VD1VSYT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V5VD1VSYT5');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Krok Pharmacy 2018</title>
+    <link rel="stylesheet" href="testkrokstyle.css">
+    <style>
+        /* Added basic styling for answer images */
+        .answer-image {
+            max-width: 100%;
+            max-height: 120px; /* Example max height */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body data-theme="dark"> <!-- Default theme is dark -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar">
+        <a href="../../index.html" class="brand notranslate">KrokWorld</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../Guide.html">Guide</a>
+            <a href="../../Contact.html">Contact us</a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Krok Pharmacy Exam 2018</h1>
+        <div id="quiz" class="notranslate"></div>
+        <button onclick="submitQuiz()" class="collapsible">Submit</button>
+        <p id="score"></p>
+    </div>
+
+<script>
+    // --- Theme Switcher Script ---
+    const themeSwitch = document.querySelector('#checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (!currentTheme) {
+        localStorage.setItem('theme', 'dark');
+        document.body.setAttribute('data-theme', 'dark');
+    } else {
+        document.body.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'light') {
+            themeSwitch.checked = true;
+        }
+    }
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    themeSwitch.addEventListener('change', switchTheme, false);
+
+    // --- Navbar Scroll Script ---
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > navbar.clientHeight) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+    // --- Quiz Script ---
+    const questions = 
+[
+{
+question: "What titrimetric method of analysis requires the use of both externaland internal indicators?",
+correct: "Nitritometry",
+incorrect: ["Alkalimetry", "Complexometric titration", "Permanganatometry", "Argentometry"]
+},
+{
+question: "By means of photoelectrocolorimetric analysis the concentration of the following can be determined:",
+correct: "Colored solution",
+incorrect: ["Turbid solution", "Optically active substance", "Colorless solution", "Any type of solution"]
+},
+{
+question: "A patient suffers from Down’s disease that manifests as mental retardation, shortness of stature, pathologically short fi- ngers and toes, and eyes with mongoloid slant. Karyotype analysis revealed trisomy 21. What group of diseases does this pathology belong to?",
+correct: "Chromosomal disorders",
+incorrect: ["Molecular genetic disease", "Gametopathy", "Fetopathy", "Blastopathy"]
+},
+{
+question: "Knowing the temperature of phase transformation under a certain pressure is extremely important in the process of drugs manufacturing. This temperature can be calculated using the:",
+correct: "Clausius-Clapeyron equation",
+incorrect: ["Trouton’s rule", "Gibbs’ phase rule", "Mendeleev-Clapeyron equation", "Konovalov’s laws"]
+},
+{
+question: "At the triple point on the water phase diagram, water is:",
+correct: "An invariant system",
+incorrect: ["A monovariant system", "A bivariant system", "A trivariant system", "A quadrivariant system"]
+},
+{
+question: "Bioavailability of a powder depends on the degree of comminution of the substance. The following value must be measured:",
+correct: "Dispersion",
+incorrect: ["Concentration", "Particle volume", "Particle mass", "Solution density"]
+},
+{
+question: "A patient with gout was prescribed allopurinol - a competitive inhibitor of xanthine oxidase. Xanthine oxidase is a terminal enzyme of catabolism of:",
+correct: "Purine nucleotides",
+incorrect: ["Glycoproteins", "Phospholipids", "Higher fatty acids", "Heteropolysaccharides"]
+},
+{
+question: "Many drugs must be manufactured under strictly aseptic conditions. One such possible source of microbiological contamination of drugs is laboratory glassware. What method should be used to sterilize the glassware?",
+correct: "Dry heat",
+incorrect: ["Ignition", "Boiling", "Tyndallization", "Pasteurization"]
+},
+{
+question: "To determine qualitative content of a drug, the drug sample was processed with 2M solution of HCl. White precipitate soluble in aqueous ammonia solution was formed. This analytical effect indicates the presence of the following cations:",
+correct: "Silver(I)",
+incorrect: ["Lead(II)", "Mercury(I)", "Mercury(II)", "Tin(II)"]
+},
+{
+question: "Name the process of spontaneous adhesion of drops in an emulsion to each other:",
+correct: "Coalescence",
+incorrect: ["Flocculation", "Sedimentation", "Flotation", "Coagulation"]
+},
+{
+question: "Inheritable genetic disorders can result in disturbed enzyme synthesis in the human body. What enzyme deficiency results in disturbed break-up of lactose:",
+correct: "Lactase",
+incorrect: ["Maltase", "Invertase", "Lipase", "Peptidase"]
+},
+{
+question: "To treat the patients with purulent wounds, a dressing with a certain immobilized enzyme is used. Name this enzyme:",
+correct: "Tripsin",
+incorrect: ["Arginase", "Catalase", "Alkaline phosphatase", "Acid phosphatase"]
+},
+{
+question: "Cerebrospinal fluid of a patient diagnosed with meningitis was taken for analysis. To detect the causative agent the sample was inoculated in a nutrient medium. Prior to that a serum had been added to the medium. What causative agent is expected to be obtained in this case?",
+correct: "Meningococcus",
+incorrect: ["Mycobacteria", "Staphylococcus", "Viruses", "Rickettsia"]
+},
+{
+question: "Hormones regulate numerous metabolic processes. What hormone activates glycogen synthesis?",
+correct: "Insulin",
+incorrect: ["Adrenaline", "Vasopressin", "Thyroxine", "Oxytocin"]
+},
+{
+question: "A structural analog of vitamin PP (nicotinic acid) is used as an antituberculous medicine. Name this medicine:",
+correct: "Isoniazid",
+incorrect: ["Streptocide", "Riboflavin", "Tetracycline", "Aspirin"]
+},
+{
+question: "A food plant of Polygonaceae family is being studied. The plant has reddish stalk, cordate-sagittate leaves, its fruit is a trihedral nutlet. Name this plant:",
+correct: "Fagopyrum esculentum",
+incorrect: ["Persicaria bistorta", "Persicaria hydropiper", "Polygonum aviculare", "Rumex confertus"]
+},
+{
+question: "Microscopy of subterranean organs of an Asteraceae family plant shows articulated laticifers with anastomoses filled with white latex. It is characteristic of the following plant:",
+correct: "Taraxacum officinale",
+incorrect: ["Helianthus annuus", "Artemisia absinthium", "Bidens tripartita", "Achillea millefolium"]
+},
+{
+question: "The defensive mechanisms against some infectious diseases can be greatly reinforced with interferon. Interferon preparations will be the most advisable in cases of the following type of infections:",
+correct: "Viral",
+incorrect: ["Helminthic", "Protozoal", "Microbioses", "Fungal"]
+},
+{
+question: "A chemotherapeutic agent has bactericidal effect against streptococci, staphylococci, bacilli, and clostridia. According to its action spectrum this drug belongs to the following group:",
+correct: "Broad spectrum antibacterial agents",
+incorrect: ["Narrow spectrum antibacterial agents", "Broad spectrum antifungal agents", "Antiviral agents", "Antituberculous agents"]
+},
+{
+question: "It is known that in plants the synthesis of secondary reserve starch occurs in:",
+correct: "Amyloplasts",
+incorrect: ["Chloroplasts", "Chromoplasts", "Elaioplasts", "Proteinoplasts"]
+},
+{
+question: "A patient has developed anuria. Blood pressure is 50/20 mm Hg. What process of uropoiesis was disturbed resulting in acute decrease of urine output?",
+correct: "Glomerular filtration",
+incorrect: ["Obligate reabsorption", "Facultative reabsorption", "Tubular secretion", "-"]
+},
+{
+question: "A 12-year-old boy is of short stature, but his mental development corresponds with that of his age group. What hormone deficiency is the most likely to cause this pathology?",
+correct: "Somatotropin",
+incorrect: ["Insulin", "Oxytocin", "Vasopressin", "Adrenaline"]
+},
+{
+question: "A 10-year-old child has height of 178 cm and body mass of 67 kg. These presentations are caused by the functional disturbance of the:",
+correct: "Pituitary gland",
+incorrect: ["Thyroid gland", "Gonads", "Adrenal glands", "Parathyroid glands"]
+},
+{
+question: "A certain infection leads to fetus malformation if a pregnant woman is affected. What vaccine should be used for prevention of this infection?",
+correct: "Rubella virus vaccine",
+incorrect: ["Influenza virus vaccine", "Mumps vaccine", "Poliovirus vaccine", "Antirabic vaccine"]
+},
+{
+question: "Quantitative content of hydrogen peroxide can be determined by means of the following self-indicator method:",
+correct: "Permanganatometry",
+incorrect: ["Bromatometry", "Iodometry", "Nitritometry", "Argentometry"]
+},
+{
+question: "Coumarins, vitamin K antagonists, suppress the processes of blood coagulation. What protein synthesis is blocked by coumarins?",
+correct: "Prothrombin",
+incorrect: ["Gamma globulin", "Albumin", "Transferrin", "Ceruloplasmin"]
+},
+{
+question: "HIV-infection occupational risk groups include people of various professions, healthcare workers included. Specify the most likely route of infection transmission for healthcare workers:",
+correct: "Parenteral transmission",
+incorrect: ["Fecal-oral transmission", "Droplet transmission", "Transmission via airborne dust particles", "Vector-borne transmission"]
+},
+{
+question: "Microbial survival within environment is facilitated by spore formation. What microorganisms of those listed below are spore formers:",
+correct: "Clostridia",
+incorrect: ["Bacteroides", "Staphylococci", "Peptococci", "Peptostreptococci"]
+},
+{
+question: "Synthesis of a medicinal substance occurs in an isolated system. What is a direction criterion of spontaneous processes?",
+correct: "Entropy change",
+incorrect: ["Gibbs energy", "Helmholtz energy", "Intrinsic energy", "Enthalpy"]
+},
+{
+question: "An enzyme transports structure fragments from one substrate into another. Name this class of enzymes:",
+correct: "Transferases",
+incorrect: ["Isomerases", "Oxidoreductases", "Ligases", "Hydrolases"]
+},
+{
+question: "A patient with high risk of hemorrhages is recommended to take vicasol (menadione) by his physician. This drug is the structural analog of:",
+correct: "Vitamin K",
+incorrect: ["Vitamin A", "Vitamin B5", "Vitamin B12", "Vitamin B6"]
+},
+{
+question: "Enzymes are widely used as drugs in pharmacy. What is the main feature that separates enzymes from non-biological catalysts?",
+correct: "High specificity and selectivity",
+incorrect: ["High universality", "Low universality", "High dispersion", "High homogeneity"]
+},
+{
+question: "Any damage to the patient’s vessels results in persistent hemorrhage. Blood clotting factor VIII is deficient in the patient’s blood. What disease does this patient suffer from?",
+correct: "Hemophilia",
+incorrect: ["Acute vascular purpura", "Thrombocytopenic purpura", "Anemia", "Radiation sickness"]
+},
+{
+question: "Name the structural unit of a colloidal solution of a medicinal substance:",
+correct: "Micelle",
+incorrect: ["Molecule", "Atom", "Ion", "Zwitterion"]
+},
+{
+question: "Protein structure includes proteinogenic amino acids. What is the position of the amino group in the structure of these amino acids?",
+correct: "α-position",
+incorrect: ["β-position", "γ-position", "δ-position", "ε-position"]
+},
+{
+question: "To induce diabetes mellitus in a rabbit, β-cells of pancreatic islets (islets of Langerhans) were selectively damaged with alloxan. What method of diabetes induction was used in this experiment?",
+correct: "Shutdown",
+incorrect: ["Irritation", "Introduction of enzymes, hormones", "Isolated organs", "Stimulation"]
+},
+{
+question: "A sample section of an axial body shows a complex consisting of phellogen and its derivatives - cork and phelloderm. Name this tissue:",
+correct: "Periderm",
+incorrect: ["Colenchyma", "Sclerenchyma", "Epiblema", "Epidermis"]
+},
+{
+question: "The Mohr method is used to determine mass concentration of sodium chloride in an isotonic solution. Titration is carried out with the following indicator:",
+correct: "Potassium chromate",
+incorrect: ["Fluorescein", "Ammonium iron(III) sulfate", "Diphenylcarbazone", "Ferroin"]
+},
+{
+question: "A patient presents with persistent tachycardia, exophthalmos, high excitability, increased basal metabolic rate. What disorder can lead to the development of this syndrome?",
+correct: "Hyperthyroidism",
+incorrect: ["Hypoparathyroidism", "Hypothyroidism", "Hyperparathyroidism", "Adrenal hypofunction"]
+},
+{
+question: "Racemose clusters of calcium carbonate crystals are detected among the waste products of a protoplast. These crystals are:",
+correct: "Cystoliths",
+incorrect: ["Isolated crystals", "Raphides", "Styloid crystals", "Crystal druses"]
+},
+{
+question: "After the pus sample taken from the urethra had been inoculated on ascitic agar, it resulted in growth of round transparent colonies. Microscopy of the colonies shows gram-negative kidney bean-shaped diplococci. What causative agent is it?",
+correct: "Gonococcus",
+incorrect: ["Pneumococcus", "Meningococcus", "Micrococcus", "Streptococcus"]
+},
+{
+question: "Laboratories of various specialization use the following method to determine general water hardness of potable water:",
+correct: "Complexometric titration",
+incorrect: ["Acidimetry", "Precipitation", "Oxidimetry", "Alkalimetry"]
+},
+{
+question: "Name the reaction producing a golden-yellow precipitate (”golden rain” reaction):",
+correct: "Precipitation of PbI₂",
+incorrect: ["Precipitation of PbCl₂", "Precipitation of AgI", "Precipitation of HgI₂", "Precipitation of Hg₂I₂"]
+},
+{
+question: "Name the reactions and reagents that under certain conditions allow determination of certain ions in the presence of other ions:",
+correct: "Specific",
+incorrect: ["Selective", "Group", "Characteristic", "General"]
+},
+{
+question: "In Friedel-Crafts alkylation of aromatic hydrocarbons the following substance is used as the catalyst:",
+correct: "Anhydrous AlCl₃",
+incorrect: ["Pt", "Cr₂O₃", "Alcoholic NaOH solution", "PCl₅"],
+imagem:"Images/192.webp"
+},
+{
+question: "What compound of those listed below is a condensed arene?",
+correct: { type: 'image', src:'Images/193.webp' },
+incorrect: [{ type: 'image', src:'Images/194.webp' }, { type: 'image', src:'Images/195.webp' }, { type: 'image', src:'Images/196.webp' }, { type: 'image', src:'Images/197.webp' }]
+},
+{
+question: "How does increasing temperature affects physical adsorption of substances?",
+correct: "Decreases",
+incorrect: ["Increases", "Transforms into chemical adsorption", "Decreases in heterogeneous systems", "Increases in homogeneous systems"]
+},
+{
+question: "Gelatin expands the most in the following solvent:",
+correct: "Water",
+incorrect: ["Acetic acid solution", "Ethanol", "Diethyl ether", "Benzene"]
+},
+{
+question: "Azo dyes are produced as the result of:",
+correct: "Azo coupling",
+incorrect: ["Diazotization", "Amination", "Nitration", "Nitrosation"]
+},
+{
+question: "What reaction results in production of phthalic anhydride?",
+correct: { type: 'image', src:'Images/199.webp' },
+incorrect: [{ type: 'image', src:'Images/200.webp' }, { type: 'image', src:'Images/201.webp' }, { type: 'image', src:'Images/202.webp' }, { type: 'image', src:'Images/203.webp' }],
+image:"Images/198.webp"
+},
+{
+question: "What drug is produced as the result of reaction between salicylic acid and acetic anhydride?",
+correct: "Aspirin",
+incorrect: ["Salicylamide", "Phenyl salicylate", "Benzyl salicylate", "Sodium salicylate"],
+image:"Images/204.webp"
+},
+{
+question: "Glucose oxidation with a potent oxidizing agent (concentrated HNO₃) results in production of:",
+correct: { type: 'image', src:'Images/205.webp' },
+incorrect: [{ type: 'image', src:'Images/206.webp' }, { type: 'image', src:'Images/207.webp' }, { type: 'image', src:'Images/208.webp' }, { type: 'image', src:'Images/209.webp' }]
+},
+{
+question: "A patient was prescribed an antitumoral antibiotic that inhibits synthesis of nucleic acids in the cells. What of the following antibiotics has such a mechanism of action?",
+correct: "Actinomycin",
+incorrect: ["Tetracycline", "Nystatin", "Lincomycin", "Erythromycin"]
+},
+{
+question: "The kinetics of thermal decomposition is investigated in a bomb calorimeter. What type is this process?",
+correct: "Isohoric",
+incorrect: ["Isobaric", "Isothermic", "Equilibrium", "Cyclic"]
+},
+{
+question: "One of the important diagnostic features of garden sage and motherwort is their shape of corolla. Their flowers have the following type of corolla:",
+correct: "Bilabiate",
+incorrect: ["Thimble-shaped", "Funnelform", "Pseudoligulate", "Ligulate"]
+},
+{
+question: "Water at the triple point is a system:",
+correct: "Invariant",
+incorrect: ["Four- variant", "Monovariant", "Three- variant", "Bivariant"]
+},
+{
+question: "What standard solution (titrant) is used in Folgard’s method of direct titration?",
+correct: "Ammonium thiocyanate",
+incorrect: ["Sodium chloride", "Silver nitrate", "Potassium chromate", "Potassium dichromate"]
+},
+{
+question: "A certain dioecious plant commonly grows at the forest edge. It is a shrub with thorned sprouts. Its fruit is a round black coenocarpous drupe (pyrenarium) with 3-4 seeds. Name this plant:",
+correct: "Rhamnus cathartica",
+incorrect: ["Hippophae rhamnoides", "Crataegus sanguinea", "Rosa canina", "Sambucus nigra"]
+},
+{
+question: "What name does this compound have in the IUPAC nomenclature: CH₃-CO-CH₂-COOH?",
+correct: "3-Oxobutanoic acid",
+incorrect: ["-", "β-Ketopropionic acid", "Butyric acid", "Butyraldehyde"]
+},
+{
+question: "Primary alcohols upon their oxidation form:",
+correct: "Aldehydes",
+incorrect: ["Ketones", "Ethers", "Esters", "Diketones"]
+},
+{
+question: "Extreme therapeutic effect of activated carbon is due to its high specific surface area. Name the phenomenon when gases are absorbed only by the surface of a solid body:",
+correct: "Adsorption",
+incorrect: ["Adhesion", "Desorption", "Cohesion", "Recuperation"]
+},
+{
+question: "Pastes are used in medicine to treat skin diseases. What type of disperse systems are they?",
+correct: "Suspensions",
+incorrect: ["Emulsions", "Powders", "Foams", "Aerosols"]
+},
+{
+question: "In photometric analysis the series of 6-8 standard solutions is used:",
+correct: "To build a calibration curve",
+incorrect: ["To assess determination method", "To simplify working method", "To choose cuvettes", "To choose optical filter"]
+},
+{
+question: "Ammonium iron(III) sulfate can be used as an indicator in:",
+correct: "Argentometry, Volhard method",
+incorrect: ["Argentometry, Mohr method", "Alkalimetry", "Acidimetry", "Complexometric titration"]
+},
+{
+question: "Quantitative determination of iodine is done by means of:",
+correct: "Redox titration",
+incorrect: ["Alkalimetry", "Complexometric titration", "Acidimetry", "Precipitation titration"]
+},
+{
+question: "Separation of substances in chromatography is based on the ability of solutes:",
+correct: "To distribute between the mobile and stationary phases",
+incorrect: ["To distribute between two mobile phases", "To distribute between two stationary phases", "To dissolve", "To precipitate"]
+},
+{
+question: "Quantitative content of oxalic acid can be determined by means of permanganatometry. How to determine equivalence point for this kind of titration?",
+correct: "When titrate changes its color after another drop of process solution is added",
+incorrect: ["With redox indicator diphenylamine", "With pH indicator", "With specific indicator", "With adsorption indicator"]
+},
+{
+question: "Surfactants and high-molecular compounds are added into concentrated emulsions to stabilize them. These substances are:",
+correct: "Emulsifiers",
+incorrect: ["Activators", "Catalysts", "Solvents", "Absorbents"]
+},
+{
+question: "Reaction of benzene sulfonation produces:",
+correct: { type: 'image', src:'Images/211.webp' },
+incorrect: [{ type: 'image', src:'Images/212.webp' }, { type: 'image', src:'Images/213.webp' }, { type: 'image', src:'Images/214.webp' }, { type: 'image', src:'Images/215.webp' }],
+image:"Images/210.webp"
+},
+{
+question: "Choose the reaction of ester production among those listed below:",
+correct: { type: 'image', src:'Images/216.webp' },
+incorrect: [{ type: 'image', src:'Images/217.webp' }, { type: 'image', src:'Images/218.webp' }, { type: 'image', src:'Images/219.webp' }, { type: 'image', src:'Images/220.webp' }]
+},
+{
+question: "A 25-year-old man has an appointment with the dentist. Several minutes after his oral cavity was lavaged with furacilin (nitrofurazone) the patient developed significant labial edema. What type of allergic reaction is observed in this case?",
+correct: "Anaphylactic",
+incorrect: ["Delayed-type hypersensitivity", "Cytolytic", "Stimulated", "Immune complex"]
+},
+{
+question: "A patient with gastric carcinoma has undergone several courses of radiation therapy. What system is the first to become functionally disturbed after the body was exposed to ionizing radiation?",
+correct: "Blood",
+incorrect: ["Nervous", "Digestive", "Urinary", "Respiratory"]
+},
+{
+question: "A patient with acute myocardial infarction received anticoagulation therapy. What compound will have anticoagulation effect?",
+correct: "Heparin",
+incorrect: ["Hyaluronic acid", "Chondroitin sulfate", "Dermatan sulfate", "Keratan sulfate"]
+},
+{
+question: "Specify what method of redox titration requires the use of specific indicator - starch - to fix the end point:",
+correct: "Iodometry",
+incorrect: ["Permanganatometry", "Nitritometry", "Cerimetry", "Bromatometry"]
+},
+{
+question: "Causative agents of infectious diseases can be carried both by humans and animals. Name the group of infections that affect animals and can be passed onto humans:",
+correct: "Zooanthroponoses",
+incorrect: ["Sapronoses", "Anthroponoses", "Zoonoses", "Mixed"]
+},
+{
+question: "During regular check-up a patient presents with enlarged thyroid gland, exophthalmos, increased body temperature, heart rate up to 110/min. What hormone should be measured in the patient’s blood in this case?",
+correct: "Thyroxin",
+incorrect: ["Testosterone", "Glucagon", "Insulin", "Cortisol"]
+},
+{
+question: "A fruit tree of Rosaceae family has short thorny shoots; the fruit is a distinctively-shaped pome with stone cells in its pulp. Name this plant:",
+correct: "Pyrus communis",
+incorrect: ["Malus sylvestris", "Cerasus vulgaris", "Prunus armeniaca", "Prunus spinosa"]
+},
+{
+question: "Pharmacopoeia reaction to determine benzoate ions requires interaction with the solution of:",
+correct: "Iron(III) chloride",
+incorrect: ["Potassium chloride", "Resorcin", "Acetic anhydride", "Diphenylamine"]
+},
+{
+question: "What solution can be used to determine the presence of chloride ions in the potable water?",
+correct: "Silver nitrate",
+incorrect: ["Iodine", "Potassium bromate", "Sodium hydroxide", "Ammonia"]
+},
+{
+question: "Insulin production in β-cells involves many substances. What substance gives the main signal for insulin synthesis when its concentration changes?",
+correct: "Glucose",
+incorrect: ["Carbon dioxide", "Heparin", "Hemoglobin", "Urea"]
+},
+{
+question: "Specify the substance that results from the following reaction: CH ≡ CH + HOH, Hg²⁺ →?",
+correct: "Ethanal",
+incorrect: ["Ethanol", "Propanal", "Propanone", "Acetic acid"],
+image:"Images/221.webp"
+},
+{
+question: "An ophthalmologist has detected increased time of dark adaptation in a patient. What vitamin deficiency can result in such symptom?",
+correct: "A",
+incorrect: ["C", "K", "B₁", "B₆"]
+},
+{
+question: "Morphologically the herbaceous plant being studied can be identified as Convallaria majalis. To confirm this conclusion additionally, a leaf of this plant was examined under the microscope and a search for the following crystalline inclusions was conducted:",
+correct: "Raphides",
+incorrect: ["Single crystals", "Druse crystals", "Styloid crystals", "Crystal sand"]
+},
+{
+question: "What type of conducting bundle is characteristic of primary anatomical structure of a root?",
+correct: "Radial",
+incorrect: ["Concentric", "Closed collateral", "Bicollateral", "Open collateral"]
+},
+{
+question: "Calendula officinalis as a representative of Asteraceae family can be characterized by the following type of inflorescence:",
+correct: "Anthodium",
+incorrect: ["Umbel", "Catkin", "Capitulum", "Corymb"]
+},
+{
+question: "In the age of 5 months the child had measles antibodies in the blood. By the age of 1 year these antibodies disappeared from the child’s blood. Why were these antibodies present in the child’s blood?",
+correct: "Acquired natural passive immunity",
+incorrect: ["Non-specific resistance", "Acquired natural active immunity", "Innate immunity", "Artificial immunity"]
+},
+{
+question: "A Gram stained smear shows large oval violet cells that form pseudomycelium. Name these microorganisms:",
+correct: "Candida fungi",
+incorrect: ["Mucor fungi", "Plasmodium vivax", "Actinomycetales", "Penicillium fungi"]
+},
+{
+question: "Herbarium specimens of medicinal plants are being studied. Which one of them belongs to Rosaceae family?",
+correct: "Crataegus sanguinea",
+incorrect: ["Melilotus officinalis", "Conium maculatum", "Capsella bursa-pastoris", "Polygonum persicaria"]
+},
+{
+question: "When working in the garden, a man accidentally cut his hand. The wound remained untreated. Shortly after that the wounded area developed inflammation with accumulation of exudate that contained numerous viable and degenerate neutrophils. What type of exudate is it?",
+correct: "Purulent",
+incorrect: ["Serous", "Fibrinous", "Hemorrhagic", "Catarrhal"]
+},
+{
+question: "A patient presents with persistent fever, with the difference between evening and morning temperature not exceeding 1°C. What type of fever curve is present in this patient?",
+correct: "Continuous",
+incorrect: ["Remittent", "Hectic", "Recurrent", "Intermittent"]
+},
+{
+question: "Natural peptides can carry out various functions. What bioactive peptide is a major antioxidant and functions as a coenzyme?",
+correct: "Glutathione",
+incorrect: ["Bradykinin", "Oxytocin", "Liberin", "Anserine"]
+},
+{
+question: "Gout develops when purine nucleotide metabolism is disturbed. The doctor prescribed the patient allopurinol that is a competitive inhibitor of:",
+correct: "Xanthine oxidase",
+incorrect: ["Succinate dehydrogenase", "Alcohol dehydrogenase", "Lactate dehydrogenase", "Hexokinase"]
+},
+{
+question: "Name the serums made from blood donated by volunteers or reconvalescent donors:",
+correct: "Homologous",
+incorrect: ["Heterologous", "Autoimmune", "Attenuated", "Corpuscular"]
+},
+{
+question: "During skill building session in the field of microbiology, a student performed inoculation of microorganisms into the solid nutrient medium to obtain isolated colonies. How should inoculation loops be sterilized after that?",
+correct: "Heating in the burner flame",
+incorrect: ["Boiling under 60°C five times", "Soaking in 1% chloramine-B solution", "Dry heat sterilization under 160°C for 120-150 minutes", "Formaldehyde vapor sterilization"]
+},
+{
+question: "A dry-heat box is used for sterilization of various materials and instruments in a bacteriological laboratory. This sterilization method can be applied to the following objects:",
+correct: "Glass test tubes",
+incorrect: ["Rubber gloves", "Simple nutrient medium", "Wire inoculating loops", "Physiological saline"]
+},
+{
+question: "A specialist of the analytical laboratory performs direct iodometric determination of ascorbic acid. What indicator is used in this case?",
+correct: "Starch",
+incorrect: ["Methyl orange", "Diphenylamine", "Phenolphthalein", "Methyl red"]
+},
+{
+question: "A certain herbaceous plant grows on the meadows of the Carpathian Mountains. It has orange anthodium inflorescences, upright stem, and a rosette of basal leaves. Name this plant:",
+correct: "Arnica montana",
+incorrect: ["Cychorium intybus", "Calendula officinalis", "Echinacea purpurea", "Centaurea cyanus"]
+},
+{
+question: "What indicator is used for fixing the endpoint of mercurimetric titration?",
+correct: "Thiocyanate complexes of iron(III)",
+incorrect: ["Fluorescein", "Eosin", "Murexide", "Potassium chromate"]
+},
+{
+question: "Ultraviolet irradiation is used in medicine in various physiotherapeutic procedures. What mechanism of medicinal action is characteristic of ultraviolet rays?",
+correct: "Activation of vitamin D synthesis",
+incorrect: ["Activation of drug action", "Decrease of melanin synthesis in the skin", "Intensification of cell division", "Activation of lipid peroxidation"]
+},
+{
+question: "Human body assimilates fats only as emulsions. Vegetable oils and animal fats contained in food are emulsified when exposed to bile (an emulsifier). How does interface tension change in this case?",
+correct: "Decreases",
+incorrect: ["Increases", "Remains unchanged", "First increases, then decreases", "First decreases, then increases"]
+},
+{
+question: "A patient has a gallstone lodged in the common bile duct, which blocks bile supply to the intestine. What digestive process will be disturbed in this case?",
+correct: "Fat digestion",
+incorrect: ["Protein absorption", "Carbohydrate digestion", "Carbohydrate absorption", "Protein digestion"]
+},
+{
+question: "You are studying a silvery downy plant of Asteraceae family, which is rich in essential oils and bitters. Harvested are the apical sprouts with a panicle of small round flower heads. This plant is:",
+correct: "Artemisia absinthium",
+incorrect: ["Arctium lappa", "Bidens tripartita", "Calendula officinalis", "Chamomilla recutita"]
+},
+{
+question: "A 46-year-old patient presents with hyperactivity of creatine kinase in his blood serum. What pathology can be suspected?",
+correct: "Myocardial infarction",
+incorrect: ["Acute pancreatitis", "Chronic hepatitis", "Hemolytic anemia", "Renal failure"]
+},
+{
+question: "Among dosage forms there are numerous disperse systems. Select a free disperse system from the list:",
+correct: "Emulsion",
+incorrect: ["Gel", "Jelly", "Diaphragm", "Membrane"]
+},
+{
+question: "How according to the Pharmacopoeia is pH determined?",
+correct: "Potentiometry",
+incorrect: ["Spectrophotometry", "Indicator", "Conductometry", "Polarography"]
+},
+{
+question: "A patient is pale, has goose bumps and chills. What stage of fever is it characteristic of?",
+correct: "Temperature increase",
+incorrect: ["Temperature decrease", "Continuous fever", "Compensation", "Latent stage"]
+},
+{
+question: "Ascarids were detected in a sick child. What changes in leukogram will be the most characteristic of helminthiasis?",
+correct: "Eosinophilia",
+incorrect: ["Basophilia", "Neutrophilia", "Lymphocytosis", "Monocytosis"]
+},
+{
+question: "A man received a radiation dose of 30 Gy. He presents with necrotic angina and disorders of the gastrointestinal tract. Blood tests revealed anemia, leukopenia and thrombocytopenia. What stage of acute radiation sickness is observed in the patient?",
+correct: "Manifest illness stage",
+incorrect: ["Prodromal stage", "Latent stage", "Recovery", "-"]
+},
+{
+question: "Neuroleptanalgesia has been applied in a case of cardiac infarction. What neuroleptic is most often administered along with fentanyl?",
+correct: "Droperidol",
+incorrect: ["Perphenazine (Aethaperazinum)", "Levomepromazine", "Clozapine", "Sulpiride"]
+},
+{
+question: "Select the halogenated antiseptic that would be preferable for a child to pack in the first aid kit, when going to a summer camp:",
+correct: "Iodine alcoholic solution",
+incorrect: ["Brilliant green", "Copper sulfate", "Methylene blue", "Formaldehyde solution"]
+},
+{
+question: "A patient, who was prescribed famotidine to treat peptic ulcer disease, came to the pharmacy. What is this drug’s mechanism of action?",
+correct: "H2-histamine receptor blockade",
+incorrect: ["H1-histamine receptor blockade", "Muscarinic receptor blockade", "Inhibition of hydrogen potassium ATPase", "Ganglionic receptor blockade"]
+},
+{
+question: "What is represented by such a pharmacokinetic value of a drug as its biological half-life (T1/2)?",
+correct: "Time period in which plasma drug concentration decreases by 50%",
+incorrect: ["Blood plasma volume cleared of drug within a time unit", "Period of total body clearance", "Renal clearance rate", "Correlation between the drug clearance rate and plasma drug concentration"]
+},
+{
+question: "A doctor needs to prescribe the patient a drug for replacement therapy after thyreoidectomy. What drug would you recommend?",
+correct: "L-thyroxine",
+incorrect: ["Insulin", "Prednisolone", "Parathyroidin", "Thiamazole"]
+},
+{
+question: "What is the main mechanism of benzylpenicillin bactericidal action on the coccal flora?",
+correct: "Disturbed synthesis of microbial cell wall",
+incorrect: ["Inhibition of protein synthesis", "Disturbed cytoplasmic membrane permeability", "Activation of macroorganism immune system", "Increased phagocytic activity of leukocytes"]
+},
+{
+question: "What mucolytic agent would you recommend for the patient with acute bronchitis to facilitate expectoration?",
+correct: "Acetylcysteine",
+incorrect: ["Glaucine", "Codeine", "Libexin (Prenoxdiazine)", "Hydrocodone"]
+},
+{
+question: "A patient with allergic dermatitis came to the hospital. What anti-inflammatory and anti-allergic drug must be prescribed in this case?",
+correct: "Prednisolone",
+incorrect: ["Ethamide", "Oxytocin", "Insulin", "Retabolil (Nandrolone)"]
+},
+{
+question: "A patient with bronchial asthma was prescribed a drug with the mechanism of action that is primarily based on the stimulation of β2 adrenergic receptors. Name this drug:",
+correct: "Salbutamol",
+incorrect: ["Adrenaline hydrochloride", "Droperidol", "Clonidine", "Isadrine (Isoprenaline)"]
+},
+{
+question: "Name the ability of a drug to accumulate within the patient’s body:",
+correct: "Cumulation",
+incorrect: ["Antagonism", "Synergism", "Habituation", "Allergy"]
+},
+{
+question: "What pharmacological effect of acetylsalicylic acid allows its application in patients with ischemic heart disease for prevention of thromboses?",
+correct: "Antiaggregant",
+incorrect: ["Analgesic", "Antipyretic", "Ulcerogenic", "Anti-inflammatory"]
+},
+{
+question: "A 48-year-old patient has been intravenously administered prednisolone solution to arrest severe attack of bronchial asthma. What group of hormonal agents does prednisolone belong to?",
+correct: "Glucocorticoids",
+incorrect: ["Gestagenic drugs", "Estrogenic drugs", "Mineralocorticoid", "Anabolic steroids"]
+},
+{
+question: "A doctor has prescribed a nonsteroidal anti-inflammatory drug to relieve inflammation and pain syndrome. Name this drug:",
+correct: "Diclofenac sodium",
+incorrect: ["Glibenclamide", "Loratadine", "Prednisolone", "Calcium chloride"]
+},
+{
+question: "A patient suffers from hyperchromic B12-deficiency anemia. What vitamin preparation should be prescribed in this case?",
+correct: "Cyanocobalamin",
+incorrect: ["Riboflavin", "Vicasol (Menadione)", "Thiamine chloride", "Retinol acetate"]
+},
+{
+question: "To stimulate birth activity, a certain neurohypophyseal hormone is used. Name this hormone:",
+correct: "Oxytocin",
+incorrect: ["Insulin", "Glucagon", "Thyroxine", "Testosterone"]
+},
+{
+question: "Sanitary microbiological investigation of potable water has detected coliphages. What conclusion can be made about the sanitary-hygienic status of this water?",
+correct: "Fecal contamination",
+incorrect: ["The water is safe to drink", "The water is safe to drink after boiling", "Artesian water", "The water is for industrial use only"]
+},
+{
+question: "After a traffic accident the driver presents with increased blood glucose. What mechanism leads to hyperglycemia in this case?",
+correct: "Sympathoadrenal system activation",
+incorrect: ["Increased production of somatotropic hormone", "Decreased production of insulin", "Decreased production of glucagon", "Decreased tone of parasympathetic nervous system"]
+},
+{
+question: "Quantitative determination of iodides by Fajans method is performed with adsorption indicators. The following can be used as an adsorption indicator:",
+correct: "Eosin",
+incorrect: ["Methyl orange", "Phenolphthalein", "Diphenylamine", "Murexide"]
+},
+{
+question: "Pharmacopoeia reaction of potassium ferrocyanide with zinc cations produces:",
+correct: "White precipitate",
+incorrect: ["Red precipitate", "Violet precipitate", "Yellow precipitate", "Black precipitate"]
+},
+{
+question: "Rapid analysis of benzoate ions by means of Pharmacopoeia reaction with iron(III) chloride produces:",
+correct: "Pink-yellow precipitate",
+incorrect: ["Green precipitate", "Blue precipitate", "Red precipitate", "Black precipitate"]
+},
+{
+question: "The following is used to determine the titrant volume in the process of titrimetric analysis:",
+correct: "Burettes",
+incorrect: ["Measuring flasks", "Measuring glasses", "Cylinders", "Measuring tubes"]
+},
+{
+question: "A dissected flower has numerous stamens that are united by the stamen filaments into several bundles. What is this type of androecium?",
+correct: "Polyadelphous",
+incorrect: ["Monadelphous", "Diadelphous", "Didynamous", "Tetradynamous"]
+},
+{
+question: "Upon examination of a flower it is determined to have one pistil made up of single free carpel. Therefore, this gynoecium can be identified as:",
+correct: "Monocarpous",
+incorrect: ["Apocarpous", "Lysicarpous", "Paracarpous", "Syncarpous"]
+},
+{
+question: "Examination of a 45-year-old man, who for a long time kept to a vegetarian plant-based diet, revealed him to have negative nitrogen balance. What peculiarity of his diet has caused such developments?",
+correct: "Insufficient protein content",
+incorrect: ["Insufficient fat content", "Insufficient vitamin content", "Excessive water content", "Excessive carbohydrate content"]
+},
+{
+question: "After severe emotional strain a 53-year-old man suddenly developed acute pain in the heart area, which irradiates to the left hand, to the neck, and under the left scapula. He noted numbness of his left hand. His face is pale and covered in cold sweat. Nitroglycerine administration stopped the pain attack after 10 minutes had passed. What is the most likely disease in this case?",
+correct: "Angina pectoris",
+incorrect: ["Stroke", "Myocardial infarction", "Pulmonary embolism", "Somatoform autonomic dysfunction"]
+},
+{
+question: "According to the Pharmacopoeia, molecular weight of a high-molecular substance should be determined by means of:",
+correct: "Viscometry",
+incorrect: ["Potentiometry", "Nephelometry", "Osmometry", "Cryometry"]
+},
+{
+question: "In the process of coagulation by mixtures of different electrolytes, they seem to counteract each other’s effect. Name this phenomenon:",
+correct: "Antagonism",
+incorrect: ["Additivity", "Synergism", "Mutual coagulation", "Sedimentation"]
+},
+{
+question: "One of the important diagnostic features of garden sage and motherwort is their shape of corolla. Their flowers have the following type of corolla:",
+correct: "Bilabiate",
+incorrect: ["Thimble-shaped", "Funnelform", "Pseudoligulate", "Ligulate"]
+},
+{
+question: "Investigation of bacterial contamination of indoor air in a pharmacy takes into account the total number of microorganisms present in a certain air volume, as well as qualitative content of indoor air microflora. Name the sanitary-indicative microorganisms for indoor air:",
+correct: "Staphylococcus and streptococcus",
+incorrect: ["Colibacillus", "Sarcina", "Chromobacterium", "Fungi and yeasts"]
+},
+{
+question: "During ultrasound investigation a patient was diagnosed with bilateral renal artery stenosis of atherosclerotic genesis. Specify the bioactive substance that due to its excessive secretion is the key component of arterial hypertension pathogenesis in the given case:",
+correct: "Renin",
+incorrect: ["Cortisol", "Vasopressin", "Noradrenaline", "Thyroxin"]
+},
+{
+question: "Preliminary disinfection of air and working surfaces of the equipment was conducted in the operating room of the surgical inpatient unit. What method of sterilization would be the most advisable in this case?",
+correct: "Ultraviolet irradiation",
+incorrect: ["Irradiation sterilization", "High-frequency current", "Flowing steam", "Formaldehyde vapor"]
+},
+{
+question: "A patient was prescribed losartan for treatment of arterial hypertension. What mechanism of action does this drug have?",
+correct: "Angiotensin-receptor blockade",
+incorrect: ["Inhibition of angiotensin-converting enzyme", "Inhibition of phosphodiesterase", "Activation of central α-adrenoceptors", "Calcium channel blockade"]
+},
+{
+question: "Select the hepatoprotective drugs from the list below:",
+correct: "Essentiale (Phospholipides), Thiotriasoline",
+incorrect: ["No-Spa (drotaverine), papaverine hydrochloride", "Allochol, Cholenzym", "Festal, Panzinorm (Pancreatin)", "Oxaphenamide (Osalmid), Nicodin"]
+},
+{
+question: "Hydrochloric acid was added into the solution under investigation. The resulting precipitate was filtered, then this filter cake was processed with hot water; after the filtrate cooled, KI solution was added into it. What cation was present in the solution, if the precipitate was colored yellow?",
+correct: "Pb²⁺",
+incorrect: ["Ag⁺", "Hg²⁺", "Ca²⁺", "Ba²⁺"]
+},
+{
+question: "At the end of his shift a worker of the steel foundry felt dizziness, his body temperature increased to 38.5°C. What condition does he present with?",
+correct: "Hyperthermia",
+incorrect: ["Decompression", "Fever", "Hypothermia", "Hypertension"]
+},
+{
+question: "The third analytical group of cations (acid-base classification) includes Ca²⁺, Sr²⁺, Ba²⁺. What acid can function as a precipitator agent (group reagent) for these cations?",
+correct: "H₂SO₄",
+incorrect: ["HNO₃", "HCl", "CH₃COOH", "HClO₄"]
+},
+{
+question: "Students should identify the following to determine the sex of a flower:",
+correct: "Stamens and pistils",
+incorrect: ["Flower cup and corolla", "Pedicle and receptacle", "Symmetry", "Color and type of indumentum"]
+},
+{
+question: "In spring a perennial plant of Asteraceae family produces floral shoots with golden-yellow flowers. After blossom-fall, shoots with large leaves appear. Name this plant:",
+correct: "Tussilago farfara",
+incorrect: ["Hypericum perforatum", "Potentilla erecta", "Petroselinum crispum", "Datura stramonium"]
+},
+{
+question: "Ultramicroscopy is used to determine the radius of dispersed phase particles. The following should be measured to make the necessary calculations:",
+correct: "Number of particles in a definite volume",
+incorrect: ["Intensity of transmitted light", "Intensity of scattered light", "Distance traveled by a tagged particle", "Time interval in which a tagged particle travels a certain distance"]
+},
+{
+question: "Permanganatometry is used in determination of many organic and inorganic compounds. What are the main advantages of permanganatometry over the other oxidimetric methods?",
+correct: "Sufficiently high redox potential; it is possible to determine titration end-point without indicator",
+incorrect: ["Sufficiently high stability of potassium permanganate and its solutions", "High selectivity and sensitivity when determining compounds", "Pure potassium permanganate is easily available and obtainable", "Various types of indicators can be used; in some cases catalysts are necessary to accelerate the reaction"]
+},
+{
+question: "Many organic compounds break up in the cell into simple products. What compounds break up into ammonia, carbon dioxide, and water in the human body?",
+correct: "Amino acids",
+incorrect: ["Monosaccharides", "Monohydric alcohols", "Fatty acids", "Keto acids"]
+},
+{
+question: "A fruit is a capsule with oblate light brown smooth glossy seeds that mucify when moistened. This fruit belongs to:",
+correct: "Linum usitatissimum",
+incorrect: ["Hypericum perforatum", "Ledum palustre", "Linaria vulgaris", "Digitalis purpurea"]
+},
+{
+question: "What substance forms colloid solution when dissolved in water?",
+correct: "Collargol",
+incorrect: ["Sodium sulfate", "Silver nitrate", "Potassium gluconate", "Sucrose"]
+},
+{
+question: "Paracetamol has antipyretic and analgesic effect. In the human body it is neutralized in the following organ:",
+correct: "Liver",
+incorrect: ["Spleen", "Intestine", "Lungs", "Heart"]
+},
+{
+question: "Rhizome of an Asteraceae family species is polycephalous, succulent, has lysigenous cavities, accumulates inulin. Such underground organ is characteristic of:",
+correct: "Inula helenium",
+incorrect: ["Hyoscyamus niger", "Digitalis grandiflora", "Sorbus aucuparia", "Helianthus annuus"]
+},
+{
+question: "Silver nitrate solution was added into a solution with anions of the first analytical group. A yellow precipitate was produced as the result, which indicates that this solution contained:",
+correct: "Arsenite ions",
+incorrect: ["Arsenate ions", "Sulfate ions", "Iodide ions", "Bromide ions"]
+},
+{
+question: "Some medicinal plants are poisonous. Select a poisonous plant from the list below:",
+correct: "Digitalis purpurea",
+incorrect: ["Origanum vulgare", "Thymus serpilum", "Salvia officinalis", "Thymus vulgaris"]
+},
+{
+question: "What cation can be detected with Chugaiev’s agent (Dimethylglyoxime)?",
+correct: "Ni²⁺",
+incorrect: ["Ca²⁺", "Na⁺", "Mn²⁺", "Co²⁺"]
+},
+{
+question: "A patient in the state of ketoacidotic coma presents with loud rapid respiration: labored expiration with tension of expiratory muscles occurs after deep inspiration. Name this type of pathologic respiration:",
+correct: "Kussmaul’s",
+incorrect: ["Cheyne-Stokes’", "Gasping", "Stenotic", "Biot’s"]
+},
+{
+question: "In a nursery-garden some medicinal plants developed signs of a disease: there are yellow spots and necrotic foci on the leaves. Sap of the diseased plants remained infectious even after passing through a bacteria-excluding filter. No microorganisms growth was detected on the nutrient medium. What microorganisms could be the cause of this disease?",
+correct: "Viruses",
+incorrect: ["Fungi", "Ray fungi", "Bacteria", "Mycoplasma"]
+},
+{
+question: "A laboratory received ethanol and methanol. What reaction can be used to distinguish between these two substances?",
+correct: "Iodoform test (I₂ + NaOH)",
+incorrect: ["Beilstein test", "Formation of a chelate complex with copper hydroxide", "Oxidation (CrO₃, H₂SO₄)", "Reaction with halogen anhydrides of inorganic acids"]
+},
+{
+question: "Select pyridine from the listed compounds:",
+correct: { type: 'image', src:'Images/222.webp' },
+incorrect: [{ type: 'image', src:'Images/223.webp' }, { type: 'image', src:'Images/224.webp' }, { type: 'image', src:'Images/225.webp' }, { type: 'image', src:'Images/226.webp' }]
+},
+{
+question: "Specify the products of urea hydrolysis:",
+correct: "CO₂ + 2NH₃",
+incorrect: ["CO₂ + N₂ + 3H₂", "CO + 2NH₃", "CO + N₂ + 3H₂", "CO₂ + N₂ + 3H₂O"],
+image:"Images/227.webp"
+},
+{
+question: "Specify the products obtained as the result of formic acid being heated with concentrated sulfuric acid:",
+correct: "CO + H₂O",
+incorrect: ["CO₂ + H₂O", "CO + CO₂ + H₂O", "CO₂ + H₂", "CO + H₂"],
+image:"Images/228.webp"
+},
+{
+question: "Transformation C₂H₄ (alkene) → C₂H₆ (alkane) occurs during the following reaction:",
+correct: "Hydrogenation",
+incorrect: ["Dehydrogenation", "Dehydration", "Hydration", "Dimerization"]
+},
+{
+question: "Hydrolysis reaction will NOT occur with:",
+correct: "Glycerol",
+incorrect: ["Starch", "Cellulose", "Fat", "Protein"]
+},
+{
+question: "What reaction proves that phenol has acidic properties?",
+correct: { type: 'image', src:'Images/229.webp' },
+incorrect: [{ type: 'image', src:'Images/230.webp' }, { type: 'image', src:'Images/231.webp' }, { type: 'image', src:'Images/232.webp' }, { type: 'image', src:'Images/233.webp' }]
+},
+{
+question: "Select ketose from the monosaccharides listed below:",
+correct: "Fructose",
+incorrect: ["Glucose", "Mannose", "Arabinose", "Ribose"]
+},
+{
+question: "According to Hueckel’s rule an organic compound will have aromatic properties if:",
+correct: "Its molecular structure contains a planar cycle with a closed conjugated system that contains (4n+2) of pi electrons, where n = 0,1,2,3, etc.",
+incorrect: ["Its molecules are composed exclusively of carbon and hydrogen atoms that form a linear carbon chain", "There is only one substituent in the molecule", "There are condensed nuclei in the molecule", "There is a cyclohexane ring in the molecule"]
+},
+{
+question: "A pharmacy has received a batch of drugs for treatment of upper respiratory tract infection. What drug is used to treat influenza?",
+correct: "Rimantadine",
+incorrect: ["Methisazone", "Levamisole", "Idoxuridine", "Doxycycline"]
+},
+{
+question: "A woman complains of itching lips; they are reddened and covered in scabs and scales after she had been using new lipstick for two weeks. What allergic reactions result in this kind of disorders?",
+correct: "Delayed",
+incorrect: ["Cytotoxic", "Immune complex", "Anaphylactic", "Stimulating"]
+},
+{
+question: "Choose the potent fast-acting diuretic to induce forced diuresis:",
+correct: "Furosemide",
+incorrect: ["Hydrochlorothiazide", "Spironolactone", "Triamterene", "Acetazolamide"]
+},
+{
+question: "Name the psychostimulant with analeptical action, which is a purine derivative:",
+correct: "Caffeine and sodium benzoate",
+incorrect: ["Tramadol", "Medazepam", "Sodium bromide", "Sulpiride"]
+},
+{
+question: "After ischemic stroke the patient was prescribed a drug to improve his intellectual functioning and memory. What drug would he obtain in the pharmacy?",
+correct: "Piracetam",
+incorrect: ["Metoclopramide", "Tabex (Cytisine)", "Diphenin (Phenytoin)", "-"]
+},
+{
+question: "A patient with a small cut on the palm came to the dispensing chemist. What antiseptic would be advisable in this case?",
+correct: "Hydrogen peroxide",
+incorrect: ["Doxycycline hydrochloride", "Ketoconazole", "Lidocaine hydrochloride", "Flemoxin (Amoxicillin)"]
+},
+{
+question: "Mother of a 10-year-old child came to the pharmacy to obtain a drug for prevention of upper respiratory tract infections. What drug would be recommended by the dispensing chemist?",
+correct: "Interferon",
+incorrect: ["Benzoteph", "Carvedilol", "Tetracycline", "Doxorubicin"]
+},
+{
+question: "A patient came to the pharmacy to obtain an antidiarrheal agent. What drug would be recommended by the dispensing chemist?",
+correct: "Loperamide",
+incorrect: ["Dicaine (Tetracaine)", "Ranitidine", "Picolax (Sodium picosulfate)", "Anesthesin (Benzocaine)"]
+},
+{
+question: "A patient came to the pharmacy to obtain a drug that contains pancreatic enzymes and can be taken for chronic pancreatitis. What drug would be recommended by the dispensing chemist?",
+correct: "Pancreatine",
+incorrect: ["Triamcinolone", "Gordox (Aprotinin)", "Pirenzepine", "Omeprazole"]
+},
+{
+question: "Increased concentration of active oxygen forms is a mechanism of pathogenesis in a number of diseases. To prevent this process, antioxidants are prescribed. Select an antioxidant from the list below:",
+correct: "α-tocopherol",
+incorrect: ["Glucose", "Calciferol", "Cobalamine", "Glicerol"]
+},
+{
+question: "A 28-year-old man with peptic ulcer of the stomach was prescribed a drug that inhibits gastric juice secretion. Specify this drug:",
+correct: "Omeprazole",
+incorrect: ["Ethacrynic acid", "Duphalac (Lactulose)", "Lidocaine", "Fenofibrate"]
+},
+{
+question: "An engine driver complains of his seasonal allergy symptoms. What nonsedating drug should be prescribed in this case?",
+correct: "Loratadine",
+incorrect: ["Novocaine", "Fenofibrate", "Analgine (Metamizole)", "Atenolol"]
+},
+{
+question: "Salicylic acid derivatives are widely used in medicine. Specify the formula of salicylic acid:",
+correct: { type: 'image', src:'Images/234.webp' },
+incorrect: [{ type: 'image', src:'Images/235.webp' }, { type: 'image', src:'Images/236.webp' }, { type: 'image', src:'Images/237.webp' }, { type: 'image', src:'Images/238.webp' }]
+},
+{
+question: "When an isolated system spontaneously approaches its equilibrium, its entropy:",
+correct: "Approaches zero",
+incorrect: ["Approaches infinity", "Reaches maximum", "Reaches minimum", "Demonstrates linear magnification"]
+},
+{
+question: "A pharmacy produces a batch of vials with physiological saline for injections. How should they be sterilized?",
+correct: "Under pressure in an autoclave",
+incorrect: ["In a steam-jacketed autoclave chamber", "In a dry heat sterilizer", "X-ray irradiation", "Ultraviolet irradiation"]
+},
+{
+question: "A certain dioecious plant commonly grows at the forest edge. It is a shrub with thorned sprouts. Its fruit is a round black coenocarpous drupe (pyrenarium) with 3-4 seeds. Name this plant:",
+correct: "Rhamnus cathartica",
+incorrect: ["Hippophae rhamnoides", "Crataegus sanguinea", "Rosa canina", "Sambucus nigra"]
+},
+{
+question: "Choose the weakest carboxylic acid basing on its pKa value:",
+correct: "Propionic acid (рКа = 4.9)",
+incorrect: ["Acetic acid (рКа = 4.7)", "Formic acid (рКа = 3.7)", "Lactic acid (рКа = 3.9)", "Butyric acid (рКа = 4.82)"]
+},
+{
+question: "Which of the amines listed below is a primary amine?",
+correct: "C₆H₅CH₂NH₂",
+incorrect: ["C₆H₅CH₂NHCH₃", "C₆H₅NHCH₃", "C₆H₅N(CH₃)₂", "C₆H₅CH₂N(CH₃)₂"]
+},
+{
+question: "It can be safely assumed that the infants born from the mothers with the history of measles will not be affected by the measles outbreak during their stay in the maternity ward. What classes of antibodies provide the infants with the resistance to this disease?",
+correct: "IgG",
+incorrect: ["IgA", "IgD", "IgM", "IgE"]
+},
+{
+question: "The children attending a kindergarten were hospitalized with diagnosis of poliomyelitis. What was the route of infection transmission in this case?",
+correct: "Fecal-oral transmission",
+incorrect: ["Alimentary transmission", "Direct contact transmission", "Transmission via airborne dust particles", "Vector-borne transmission"]
+},
+{
+question: "What ion increases osmotic pressure in the focus of inflammation?",
+correct: "Potassium",
+incorrect: ["Calcium", "Fluorine", "Magnesium", "Chlorine"]
+},
+{
+question: "A 55-year-old man came to a doctor with complaints of acute pain in his big toes. Meat and wine are a permanent fixture in his diet. The doctor suspects gout. What substance must be measured in the patient’s blood to confirm this diagnosis?",
+correct: "Uric acid",
+incorrect: ["Urea", "Lactate", "Bilirubin", "Ketone bodies"]
+},
+{
+question: "Name the process of cell membrane saturation with a fat-like substance - suberin:",
+correct: "Suberization",
+incorrect: ["Lignification", "Mineralization", "Cutinization", "Mucification"]
+},
+{
+question: "Specify the analgesic that affects opiate receptors and can cause development of tolerance and dependence:",
+correct: "Morphine",
+incorrect: ["Phenobarbital", "Medazepam", "Voltaren (Diclofenac sodium)", "Haloperidol"]
+},
+{
+question: "During furosemide therapy of a patient with chronic edematous syndrome, his plasma-cation concentration was disturbed. What drug should be used in this case?",
+correct: "Potassium chloride",
+incorrect: ["Thiamine bromide", "Ascorutin (Ascorbic acid + Rutoside)", "Magne B6", "Aspirin"]
+},
+{
+question: "Upon examination the ophthalmologist diagnosed a 21-year-old woman with visual impairment - hemeralopia (”night blindness”). What drug should this patient take to restore her vision?",
+correct: "Retinol acetate",
+incorrect: ["Ergocalciferol", "Suprastin (Chloropyramine)", "Cholecalciferol", "Sustac forte (Nitroglycerin)"]
+},
+{
+question: "What bonds participate in creation of both linear and cyclic dimeric carboxylic acid associates?",
+correct: "Hydrogen bonds",
+incorrect: ["Ionic bonds", "Polar covalent bonds", "Nonpolar covalent bonds", "Donor-acceptor bonds"],
+image:"Images/239.webp"
+},
+{
+question: "Heating of sodium phenolate in CO₂ stream results in production of a certain carboxylic acid. Name the resulting compound:",
+correct: "Salicylic acid",
+incorrect: ["Ethyl salicylate", "Phenyl salicylate", "Benzoic acid", "Aminophenol"]
+},
+{
+question: "Which alkadiene of those listed below is a diene with cumulated double bonds?",
+correct: "CH₂ = C = CH₂",
+incorrect: ["CH₃ − CH = CH − CH₂ − CH = CH₂", "CH₂ = CH − CH₂ − CH = CH₂", "CH₂ = CH − CH₂ − CH₂ − CH = CH₂", "CH₂ = CH − CH = CH₂"]
+},
+{
+question: "What compound will be produced as the result of toluene chlorination in the presence of FeCl₃ catalyst?",
+correct: { type: 'image', src:'Images/241.webp' },
+incorrect: [{ type: 'image', src:'Images/242.webp' }, { type: 'image', src:'Images/243.webp' }, { type: 'image', src:'Images/244.webp' }, { type: 'image', src:'Images/245.webp' }],
+image:"Images/240.webp"
+},
+{
+question: "Select α-maltose from the list:",
+correct: "4-О-(α-D-glucopyranoside)-α-D-glucopyranose",
+incorrect: ["4-О-(α-D-glucopyranoside)-β-D-glucopyranose", "4-О-(β-D-glucopyranoside)-α-D-glucopyranose", "4-О-(β-D-glucopyranoside)-β-D-glucopyranose", "α-D-glucopyranoside-β-D-fructofuranoside"],
+image:"Images/246.webp"
+},
+{
+question: "What compound is synthesized as the result of β-picoline oxidation?",
+correct: "Nicotinic acid",
+incorrect: ["Benzoic acid", "Uric acid", "Barbituric acid", "Ascorbic acid"],
+image:"Images/247.webp"
+},
+{
+question: "Specify quinoline among the compounds given below:",
+correct: { type: 'image', src:'Images/248.webp' },
+incorrect: [{ type: 'image', src:'Images/249.webp' }, { type: 'image', src:'Images/250.webp' }, { type: 'image', src:'Images/251.webp' }, { type: 'image', src:'Images/252.webp' }]
+}
+    ];
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    let score = 0;
+
+function createQuiz() {
+  const quizDiv = document.getElementById('quiz');
+  quizDiv.innerHTML = '';
+  shuffle(questions).forEach((q, index) => {
+    const container = document.createElement('div');
+    container.className = 'question-container';
+    
+    const qTitle = document.createElement('p');
+    qTitle.textContent = `${index + 1}. ${q.question}`;
+    container.appendChild(qTitle);
+
+    // Check if a question image URL exists and add it
+    if (q.image) {
+      const img = document.createElement('img');
+      img.src = q.image;
+      img.alt = "Question related image";
+      img.className = 'question-image';
+      container.appendChild(img);
+    }
+
+    const answers = shuffle([q.correct, ...q.incorrect]);
+    answers.forEach(answer => {
+      const btn = document.createElement('div');
+      btn.className = 'answer';
+      
+      // Store the answer data (string or object) to the element for later comparison
+      btn.answerData = answer;
+      // Check if the answer is an image object or a text string
+      if (typeof answer === 'object' && answer !== null && answer.type === 'image') {
+        const img = document.createElement('img');
+        img.src = answer.src;
+        img.alt = "Answer Image";
+        img.className = 'answer-image'; // Class for styling answer images
+        btn.appendChild(img);
+      } else {
+        // It's a text answer
+        btn.textContent = answer;
+      }
+      
+      btn.addEventListener('click', () => {
+        // Disable all answer buttons in the current question's container
+        const allAnswersInContainer = container.querySelectorAll('.answer');
+        allAnswersInContainer.forEach(a => {
+          a.classList.add('disabled');
+          // Use the stored answerData to find and highlight the correct one
+          if (a.answerData === q.correct) {
+            a.classList.add('correct');
+          }
+        });
+
+        // Check if the clicked answer was correct and update score
+        if (answer === q.correct) {
+          score++;
+        } else {
+          btn.classList.add('wrong');
+        }
+      });
+      container.appendChild(btn);
+    });
+
+    quizDiv.appendChild(container);
+  });
+}
+
+    function submitQuiz() {
+      document.getElementById('score').textContent = `Your score is ${score} out of ${questions.length}`;
+      const allAnswers = document.querySelectorAll('.answer');
+      allAnswers.forEach(a => a.classList.add('disabled'));
+    }
+
+    createQuiz();
+</script>
+
+</body>
+</html>
