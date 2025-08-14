@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1324510872881128"
+     crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VD1VSYT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V5VD1VSYT5');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Pharmacology Chemistry</title>
+    <link rel="stylesheet" href="teststyle.css">
+</head>
+<body data-theme="dark"> <!-- Default theme is dark -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar">
+        <a href="../../index.html" class="brand notranslate">KrokWorld</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../Guide.html">Guide</a>
+            <a href="../../Contact.html">Contact us</a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Pharmacology Quiz</h1>
+        <div id="quiz" class="notranslate"></div>
+        <button onclick="submitQuiz()" class="collapsible">Submit</button>
+        <p id="score"></p>
+    </div>
+
+<script>
+    // --- Theme Switcher Script ---
+    const themeSwitch = document.querySelector('#checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (!currentTheme) {
+        localStorage.setItem('theme', 'dark');
+        document.body.setAttribute('data-theme', 'dark');
+    } else {
+        document.body.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'light') {
+            themeSwitch.checked = true;
+        }
+    }
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    themeSwitch.addEventListener('change', switchTheme, false);
+
+    // --- Navbar Scroll Script ---
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > navbar.clientHeight) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+    // --- Quiz Script ---
+    const questions = [
+   {
+    question: "A patient developed an atrioventricular block. What drug is indicated in this case?",
+    correct: "Atropine",
+    incorrect: [
+      "Clophelin (Clonidine)",
+      "Metoprolol",
+      "Anaprilin (Propranolol)",
+      "Pirenzepine"
+    ]
+  },
+  {
+    question: "What is the name of the phenomenon when one drug enhances the effect of another?",
+    correct: "Synergism",
+    incorrect: [
+      "Withdrawal",
+      "Tachyphylaxis",
+      "Sensitization",
+      "Antagonism"
+    ]
+  },
+  {
+    question: "What drug can be used to stop a bronchospasm?",
+    correct: "Salbulamol",
+    incorrect: [
+      "Amoxicillin",
+      "Aspirin",
+      "Atenolol",
+      "Omnoponum"
+    ]
+  },
+  {
+    question: "A fibrinolysis inhibitor was used to stop postpartum bleeding. Name this drug.",
+    correct: "Aminocaproic acid",
+    incorrect: [
+      "Thrombin",
+      "Calcium chloride",
+      "Nettle leaves",
+      "Hemostatic sponge"
+    ]
+  },
+  {
+    question: "What is the mechanism of action of the antiviral drug acyclovir?",
+    correct: "Inhibition of nucleic acid synthesis",
+    incorrect: [
+      "Blockade of cellular wall synthesis",
+      "Antagonism with para-aminobenzoic acid",
+      "Inhibition of protein synthesis",
+      "Increase of cellular membrane permeability"
+    ]
+  },
+  {
+    question: "A doctor prescribed metoprolol to a patient, which helped to lower the patient’s blood pressure. This drug belongs to the following pharmacological group:",
+    correct: "Beta-blockers",
+    incorrect: [
+      "Alpha-blockers",
+      "Nicotinic antagonists",
+      "Muscarinic antagonists",
+      "Sympatholytics"
+    ]
+  },
+  {
+    question: "During a surgery with application of tubocurarine as a muscle relaxant, the patient developed a respiratory disturbance. The disturbance was eliminated after the patient was administered proserin (neostigmine). What term can be used to describe the interaction between these two drugs?",
+    correct: "Antagonism",
+    incorrect: [
+      "Cumulation",
+      "Incompatibility",
+      "Synergism",
+      "Tachyphylaxis"
+    ]
+  },
+  {
+    question: "What drug is indicated in case of an overdose of depolarizing muscle relaxants?",
+    correct: "Prozerin (Neostigmine)",
+    incorrect: [
+      "Naloxone",
+      "Magnesium sulfate",
+      "Unithiol",
+      "Metoprolol"
+    ]
+  },
+  {
+    question: "A patient suffering from neurosis associated with feelings of anxiety and fear was prescribed diazepam. What pharmacological effect of this drug allows using it in treatment of this condition?",
+    correct: "Anxiolytic",
+    incorrect: [
+      "Hypotensive",
+      "Antiarrhythmic",
+      "Anti-inflammatory",
+      "Antianginal"
+    ]
+  },
+  {
+    question: "What drug has a hypoglycemic effect because it stimulates pancreatic beta- cells?",
+    correct: "Glibenclamide",
+    incorrect: [
+      "Retabolil (Nandrolone)",
+      "Prednisolone",
+      "Heparin",
+      "Adrenaline"
+    ]
+  },
+  {
+    question: "A patient developed a hemorrhage caused by a long-term use of neodicumarin (ethyl biscoum acetate). What neodicumarin antagonist must be used in this case?",
+    correct: "Vicasol (Menadione)",
+    incorrect: [
+      "Aminocaproic acid",
+      "Etamsylate",
+      "Fibrinogen",
+      "Ascorbic acid"
+    ]
+  },
+  {
+    question: "Phenylephrine (mezaton) was administered to a patient with collapse for blood pressure correction. What is the mechanism of hypertensive action of this drug?",
+    correct: "Stimulates alpha-adrenoceptors",
+    incorrect: [
+      "Stimulates beta-adrenoceptors",
+      "Stimulates muscarinic acetylcholine receptors",
+      "Stimulates angiotensin receptors",
+      "Stimulates nicotinic acetylcholine receptors"
+    ]
+  },
+  {
+    question: "A patient with essential hypertension was prescribed lisinopril. What is the mechanism of action of this drug?",
+    correct: "Inhibits angiotensin-converting enzyme",
+    incorrect: [
+      "Blocks α-adrenergic receptors",
+      "Blocks muscarinic receptors",
+      "Stimulates β-adrenergic receptors",
+      "Blocks β-adrenergic receptors"
+    ]
+  },
+  {
+    question: "A patient has toxic pulmonary edema. What drug must be used for emergency aid in this case?",
+    correct: "Mannitol",
+    incorrect: [
+      "Hydrochlorothiazide",
+      "Diacarb (Acetazolamide)",
+      "Spironolactone",
+      "Indapamide"
+    ]
+  },
+  {
+    question: "A 34-year-old woman with bronchitis presents with persistent dry non-productive cough. Her physician prescribed her a centrally acting antitussive drug. Name this drug.",
+    correct: "Glaucine",
+    incorrect: [
+      "Mucaltin",
+      "Ambroxol",
+      "Bromhexine",
+      "Acetylcysteine"
+    ]
+  },
+  {
+    question: "What anticholinesterase agent is used to stimulate intestinal peristalsis in the patients during the postoperative period?",
+    correct: "Prozerin (Neostigmine)",
+    incorrect: [
+      "Metoprolol",
+      "Adrenaline hydrochloride",
+      "Dithylin (Suxamethonium)",
+      "Salbutamol"
+    ]
+  },
+  {
+    question: "Ascorutin is used in treatment of bleeding gums and punctate hemorrhages. What vitamin does it contain?",
+    correct: "C",
+    incorrect: [
+      "D",
+      "E",
+      "K",
+      "A"
+    ]
+  },
+  {
+    question: "What drug is used in treatment of herpes infection?",
+    correct: "Acyclovir",
+    incorrect: [
+      "Sabin's vaccine",
+      "Tamiflu (Oseltamivir)",
+      "Rimantadine",
+      "Gamma globulin"
+    ]
+  },
+  {
+    question: "What groups of antibiotics can be classified as beta-lactam antibiotics?",
+    correct: "Penicillins, cephalosporins, monobactams, carbapenems",
+    incorrect: [
+      "Penicillins, cephalosporins, tetracyclines",
+      "Penicillins, cephalosporins, macrolides, carbapenems",
+      "Cephalosporins, macrolides, aminoglycosides",
+      "Cephalosporins, monobactams, aminoglycosides"
+    ]
+  },
+  {
+    question: "To quickly stop an attack of angina pectoris, a 55-year-old patient was prescribed an organic nitrate drug. What drug is it?",
+    correct: "Nitroglycerin",
+    incorrect: [
+      "Labetalol",
+      "Octadine (Guanethidine)",
+      "Prazosin",
+      "Nifedipine"
+    ]
+  },
+  {
+    question: "A 33-year-old woman was admitted into a psychiatric hospital with an anxiety disorder of neurotic origin. What drug is indicated in this case?",
+    correct: "Diazepam",
+    incorrect: [
+      "Naloxone",
+      "Droperidol",
+      "Levodopa",
+      "Valerian extract"
+    ]
+  },
+  {
+    question: "What drugs can be classified as angiotensin-converting enzyme (ACE) inhibitors?",
+    correct: "Captopril, enalapril",
+    incorrect: [
+      "Nifedipine, diltiazem",
+      "Losartan, irbesartan",
+      "Raunatin, reserpine",
+      "Dibazol (bendazol), papaverine"
+    ]
+  },
+  {
+    question: "Gout develops when purine nucleotide metabolism is disturbed. A doctor prescribed the patient allopurinol that is a competitive inhibitor of:",
+    correct: "Xanthine oxidase",
+    incorrect: [
+      "Succinate dehydrogenase",
+      "Alcohol dehydrogenase",
+      "Lactate dehydrogenase",
+      "Hexokinase"
+    ]
+  },
+  {
+    question: "A 45-year-old woman, who for two weeks has been taking neodicoumarin (ethyl biscoumacetate) due to trombophlebitis, during a regular examination was detected to have decreased blood content of prothrombin, in urine there is microhematuria. What drug should be administered as a neodicoumarin antagonist?",
+    correct: "Vicasol (Menadione)",
+    incorrect: [
+      "Protamine sulfate",
+      "Sodium citrate",
+      "Heparin",
+      "Aminocapronic acid"
+    ]
+  },
+  {
+    question: "A patient complaining of dry mouth, photophobia, and visual impairment has been delivered into an admission room. The skin is hyperemic and dry; pupils are dilated; tachycardia is observed. The patient was diagnosed with belladonna alkaloids intoxication. What drug would be advisable?",
+    correct: "Proserin",
+    incorrect: [
+      "Aceclidine",
+      "Pilocarpine",
+      "Armin",
+      "Dipiroxim"
+    ]
+  },
+  {
+    question: "A child accidentally took a drink from the vial of grandmother’s medicine for glaucoma. The medicine was identified as pilocarpine hydrochloride. What drug can be used as an antidote?",
+    correct: "Atropine",
+    incorrect: [
+      "Carbachol",
+      "Aceclidine",
+      "Benzohexonium (Hexamethonium)",
+      "Pentamin (Azamethonium bromide)"
+    ]
+  },
+  {
+    question: "A woman suffering from neurosis has disturbed sleep. What drug is optimal for insomnia treatment?",
+    correct: "Nitrazepam",
+    incorrect: [
+      "Phenobarbital",
+      "Aethaminalum-natrium (Pentobarbital)",
+      "Bromisoval",
+      "Valerian tincture"
+    ]
+  },
+  {
+    question: "What antiprotozoal drug can be recommended to a woman with trichomoniasis?",
+    correct: "Metronidazole",
+    incorrect: [
+      "Primaquine",
+      "Chloridine",
+      "Solusurminum (Sodium stibogluconate)",
+      "Chiniofon"
+    ]
+  },
+  {
+    question: "Select the halogenated antiseptic that would be preferable for a child to pack in the first aid kit, when going to a summer camp:",
+    correct: "Iodine alcoholic solution",
+    incorrect: [
+      "Brilliant green",
+      "Copper sulfate",
+      "Methylene blue",
+      "Formaldehyde solution"
+    ]
+  },
+  {
+    question: "Name the most typical symptom of atropine poisoning:",
+    correct: "Dilated pupils unresponsive to light",
+    incorrect: [
+      "Constricted pupils unresponsive to light",
+      "Excessive sweating",
+      "Bradycardia",
+      "Low intraocular pressure"
+    ]
+  },
+  {
+    question: "A patient consulted an ophthalmologist about deterioration of twilight vision and xerophthalmus. What drug should the doctor prescribe?",
+    correct: "Retinol",
+    incorrect: [
+      "Pyridoxine",
+      "Tocopherol",
+      "Ascorbic acid",
+      "Cocarboxylase"
+    ]
+  },
+  {
+    question: "A woman with hypertension came to a doctor complaining of dry cough that developed against the background of her therapy. What antihypertensive drug was she taking?",
+    correct: "Lisinopril",
+    incorrect: [
+      "Atenolol",
+      "Nifedipine",
+      "Furosemide",
+      "Dichlothiazide (Hydrochlorothiazide)"
+    ]
+  },
+  {
+    question: "Decreased absorption of tetracyclines, if they are taken simultaneously with antacids, is an example of their:",
+    correct: "Pharmacokinetic incompatibility",
+    incorrect: [
+      "Pharmaceutical incompatibility",
+      "Pharmacodynamic incompatibility",
+      "Synergism",
+      "Functional antagonism"
+    ]
+  },
+  {
+    question: "A patient after craniocerebral trauma has been prescribed piracetam. What pharmacological group does this drug belong to?",
+    correct: "Nootropic agents",
+    incorrect: [
+      "Non-narcotic analgesics",
+      "Tranquilizers",
+      "General anesthetics",
+      "Antipsychotics"
+    ]
+  },
+  {
+    question: "Recommend the patient with glaucoma an M-cholinomimetic agent:",
+    correct: "Pilocarpine hydrochloride",
+    incorrect: [
+      "Ephedrine hydrochloride",
+      "Sulfacyl-sodium (Sulfacetamide)",
+      "Atropine sulfate",
+      "Levomycetin (Chloramphenicol)"
+    ]
+  },
+  {
+    question: "A patient with hypertension was prescribed a nonselective beta-adrenergic blocking agent. Name this drug:",
+    correct: "Anaprilin (Propranolol)",
+    incorrect: [
+      "Prazosin",
+      "Proserin",
+      "Adrenalin hydrochloride",
+      "Labetalol"
+    ]
+  },
+  {
+    question: "In the course of bronchitis pharmacotherapy a patient has developed dyspeptic disorders, photodermatitis and hepatic failure. What drug can cause such disorders?",
+    correct: "Doxycycline",
+    incorrect: [
+      "Paracetamol",
+      "Ascorbic acid",
+      "Acetylcysteine",
+      "Codeine phosphate"
+    ]
+  },
+  {
+    question: "A 25-year-old woman with signs of acute morphine intoxication was administered naloxone, which rapidly improved her condition. What is the mechanism of action of this drug?",
+    correct: "Opioid receptor blockade",
+    incorrect: [
+      "GABA receptor blockade",
+      "Serotonin receptor blockade",
+      "Dopamine receptor blockade",
+      "Benzodiazepine receptor blockade"
+    ]
+  },
+  {
+    question: "Name the ability of a drug to accumulate within the patient’s body:",
+    correct: "Cumulation",
+    incorrect: [
+      "Antagonism",
+      "Synergism",
+      "Habituation",
+      "Allergy"
+    ]
+  },
+    {
+    question: "A patient developed herpetic rashes. What drug should be prescribed in this case?",
+    correct: "Acyclovir",
+    incorrect: [
+      "Gentamicin",
+      "Clotrimazole",
+      "Benzylpenicillin",
+      "Biseptol (Co-trimoxazole)"
+    ]
+  }
+    ];
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    let score = 0;
+
+    function createQuiz() {
+      const quizDiv = document.getElementById('quiz');
+      quizDiv.innerHTML = '';
+      shuffle(questions).forEach((q, index) => {
+        const container = document.createElement('div');
+        container.className = 'question-container';
+        const qTitle = document.createElement('p');
+        qTitle.textContent = `${index + 1}. ${q.question}`;
+        container.appendChild(qTitle);
+
+        const answers = shuffle([q.correct, ...q.incorrect]);
+        answers.forEach(answer => {
+          const btn = document.createElement('div');
+          btn.className = 'answer';
+          btn.textContent = answer;
+          btn.addEventListener('click', () => {
+            const allAnswers = container.querySelectorAll('.answer');
+            allAnswers.forEach(a => {
+              a.classList.add('disabled');
+              if (a.textContent === q.correct) {
+                a.classList.add('correct');
+              }
+            });
+            if (answer === q.correct) {
+              score++;
+            } else {
+              btn.classList.add('wrong');
+            }
+          });
+          container.appendChild(btn);
+        });
+
+        quizDiv.appendChild(container);
+      });
+    }
+
+    function submitQuiz() {
+      document.getElementById('score').textContent = `Your score is ${score} out of ${questions.length}`;
+      const allAnswers = document.querySelectorAll('.answer');
+      allAnswers.forEach(a => a.classList.add('disabled'));
+    }
+
+    createQuiz();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
