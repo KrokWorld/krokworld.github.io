@@ -21,8 +21,119 @@
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Krok World</title>
+    <title>Parkinson’s Disease - Krok World</title>
     <link rel="stylesheet" href="index.css">
+    
+    <!-- Custom Styles for the Article Content to match Krok World Theme -->
+    <style>
+        /* Article Container */
+        .article-content {
+            background-color: var(--content-bg);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Better for reading long text */
+            line-height: 1.6;
+        }
+
+        .article-content h1 {
+            color: var(--brand-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            font-family: "Consolas", sans-serif; /* Keep headers consistent with site theme */
+        }
+
+        .article-content h2 {
+            color: var(--text-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--brand-color);
+            padding-left: 10px;
+            font-family: "Consolas", sans-serif;
+        }
+
+        .article-content h3 {
+            color: var(--content-link-color);
+            margin-top: 25px;
+            font-weight: bold;
+            font-family: "Consolas", sans-serif;
+        }
+
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .authors {
+            font-style: italic;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        /* Key Points Box */
+        .key-points {
+            background-color: var(--collapsible-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .key-points ul {
+            padding-left: 20px;
+            list-style-type: disc; /* Override list-style-type: none from index.css */
+        }
+        
+        .key-points li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+
+        /* Figure Box */
+        .figure-box {
+            background-color: var(--nav-bg-color);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .process-item {
+            background: var(--collapsible-bg);
+            color: var(--text-color);
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+        
+        .process-item:hover {
+            background: var(--collapsible-hover-bg);
+        }
+
+        .citation {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        strong {
+            color: var(--brand-color);
+        }
+    </style>
+
 </head>
 <body data-theme="dark"> <!-- Default theme is dark -->
     <!-- Google Tag Manager (noscript) -->
@@ -50,82 +161,120 @@
     </nav>
 
     <div class="main-content">
-        <button type="button" class="collapsible">Pharmacy</button>
-        <div class="content">
-            <button type="button" class="collapsible">Bases</button>
-            <div class="content">
-                <a href="Pharmacy/Bases/AnalyticalchemistryP.html">Analytical Chemistry Bases</a>
-                <a href="Pharmacy/Bases/OrganicchemistryP.html">Organic Chemistry Bases</a>
-                <a href="Pharmacy/Bases/BiochemistryP.html">Biochemistry Bases</a>
-                <a href="Pharmacy/Bases/BotanyP.html">Botany Bases</a>
-                <a href="Pharmacy/Bases/MicrobiologyP.html">Microbiology Bases</a>
-                <a href="Pharmacy/Bases/PharmacologyP.html">Pharmacology Bases</a>
-                <a href="Pharmacy/Bases/PathophisiologyP.html">Pathophysiology Bases</a>
-                <a href="Pharmacy/Bases/PhysicalandcolloidalChemistryP.html">Physical and Colloidal Bases</a>
+        <!-- Navigation Back Button (Optional) -->
+        <a href="main.html" style="color: var(--brand-color); text-decoration: none; margin-bottom: 20px; display: inline-block;">&larr; Back to Bases</a>
+
+        <div class="article-content">
+            <h1>Parkinson’s Disease</h1>
+            <span class="authors"></span>
+
+            <!-- Key Points Section -->
+            <div class="key-points">
+                <h3>Key Points</h3>
+                <ul>
+                    <li>Parkinson’s disease is the second most common neurodegenerative disease, affecting 1% of the population older than 65 years.</li>
+                    <li>Parkinson’s disease is characterised by bradykinesia, resting tremor, rigidity and, later in the disease course, postural instability.</li>
+                    <li>A range of non-motor features including psychiatric, cognitive and autonomic impairments contribute significantly to an impaired quality of life and are present from early in the disease course in many cases.</li>
+                    <li>Neuronal loss in the brainstem (substantia nigra) leads to a profound dopamine deficiency in the striatum. This provides the rationale for dopaminergic replacement therapies, although the pathology is not restricted to this site.</li>
+                    <li>Levodopa, coupled with an amino acid decarboxylase inhibitor, remains the most potent oral treatment for Parkinson’s disease.</li>
+                    <li>End-of-dose wearing off and on–off fluctuations are motor complications synonymous with the ongoing use of levodopa. Despite advances in oral pharmacotherapy, the on–off phenomenon can be difficult to treat effectively.</li>
+                    <li>Other dopaminergic therapies are available for the management of Parkinson’s disease. Dopamine agonists are used, sometimes as first-line therapy, in younger patients, although the increasing recognition of the neuropsychiatric problems that can arise with these agents has reduced their use. It is now therefore recommended that information regarding impulse control disorders is explicitly given to patients when such drugs are used.</li>
+                    <li>Dopamine agonists can also be given as adjunctive therapies to levodopa, when the primary aim is to smooth out motor fluctuations.</li>
+                    <li>Other interventions including surgical treatments of Parkinson’s disease, such as deep brain stimulation of the subthalamic nucleus, are effective in certain patients with marked motor fluctuations.</li>
+                    <li>Advanced Parkinson’s disease is difficult to manage, particularly the emerging dementia and neuropsychiatric problems. Reduction of dopaminergic therapy is the first approach, and rivastigmine and other cholinesterase inhibitors may be useful for the dementia associated with Parkinson’s disease.</li>
+                </ul>
             </div>
-            <button type="button" class="collapsible">Krok</button>
-            <div class="content">
-                <a href="Pharmacy/Krok/krokP2023.html">Krok Exam 2023 (150 questions)</a>
-                <a href="Pharmacy/Krok/krokP2021.html">Krok Exam 2021 (150 questions)</a>
-                <a href="Pharmacy/Krok/krokP2020.html">Krok Exam 2020 (150 questions)</a>
-                <a href="Pharmacy/Krok/krokP2019.html">Krok Exam 2019 (150 questions)</a>
-                <a href="Pharmacy/Krok/krokP2018.html">Krok Exam 2018 (200 questions)</a>
-                <a href="Pharmacy/Krok/krokP2017.html">Krok Exam 2017 (186 questions)</a>
-                <a href="Pharmacy/Krok/krokP2016.html">Krok Exam 2016 (200 questions)</a>
-                <a href="Pharmacy/Krok/krokP2015.html">Krok Exam 2015 (200 questions)</a>
+
+            <!-- Figure Representation -->
+            <div class="figure-box">
+                <span style="display:block; margin-bottom:10px; font-weight:bold; color:var(--brand-color);">Fig. 32.1 Summary of pathophysiological processes considered to be central to Parkinson’s disease:</span>
+                <div class="process-grid">
+                    <div class="process-item">Ageing</div>
+                    <div class="process-item">Genetic factors</div>
+                    <div class="process-item">Altered UPS processing</div>
+                    <div class="process-item">Oxidative stress</div>
+                    <div class="process-item">Lysosome-autophagy pathway</div>
+                    <div class="process-item">Environmental factors</div>
+                    <div class="process-item">Mitochondrial dysfunction / mitophagy</div>
+                    <div class="process-item">Protein aggregation</div>
+                    <div class="process-item">Prion-like transmission</div>
+                    <div class="process-item">Synaptic dysfunction</div>
+                    <div class="process-item">Inflammation</div>
+                    <div class="process-item">Impaired protein/membrane trafficking</div>
+                </div>
+                <p style="text-align: center; margin-top: 15px; border-top: 1px solid var(--border-color); padding-top:10px;">
+                    <strong>Result: CELL DEATH</strong><br>
+                    <small>UPS: Ubiquitin proteasome system.</small>
+                </p>
             </div>
-        </div>
 
-        <button type="button" class="collapsible">Medicine</button>
-        <div class="content">
-             <a href="#">Coming Soon</a>
-        </div>
+            <h2>Environment</h2>
+            <p>The relevance of environmental factors came to the fore in the 1980s, when drug addicts attempting to manufacture pethidine accidently produced a toxin called MPTP (1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine). The severe Parkinsonian state induced by inhalation or injection of the toxin produced a clinical syndrome that was indistinguishable from advanced PD. Similarities in the structure of MPTP to the commonly used herbicide paraquat opened up exploration of the role of chemicals used in the agricultural industry.</p>
+            <p>Pesticide exposure, rural living, agricultural occupation and well water drinking alongside head injury are all associated with an increased risk of development of PD. Conversely, tobacco smoking, coffee drinking, non-steroidal anti-inflammatory drug use, calcium channel blocker use and alcohol consumption have all been linked to a reduced risk of the disease <span class="citation">(Bellou et al., 2016)</span>.</p>
 
-        <button type="button" class="collapsible">Dentist</button>
-        <div class="content">
-             <a href="#">Coming Soon</a>
-        </div>
+            <h2>Genetics</h2>
+            <p>Single monogenic causes for PD account for a very small number of patients. The first gene of this nature to be discovered was that encoding a mutation in the synaptic protein α-synuclein <span class="citation">(Polymeropoulos et al., 1997)</span>. Shortly after its identification as the causative gene in this familial form of PD, it was found to be the major component of the intracellular protein accumulations, Lewy bodies that characterise sporadic disease <span class="citation">(Spillantini et al., 1997)</span>. This highlighted that this protein was central to what goes wrong in all cases of PD and was not just the preserve of a rare familial form of the condition.</p>
+            <p>Since this discovery, duplication and triplication in the α-synuclein gene, as well as further mutations in it along with mutations in many other genes, have been found to contribute to familial forms of the disease. However, the phenotypic nature of these forms of Parkinsonism is often different from idiopathic disease, causing atypical or early onset forms of the disease, with the exception of the LRRK2 families.</p>
+            <p>Although these genes form very much the minority of cases, there is nevertheless clear genetic risk of the development of PD, as is evidenced by recent large genome-wide associated studies <span class="citation">(Bras et al., 2015; Edwards et al., 2011)</span>. This has revealed a large number of genetic loci linked to an increased risk of development of the disorder.</p>
+            <p>More recently, through careful clinical observation in Gaucher’s disease families, it was recognised that one of the strongest genetic risk factors is a heterozygous mutation in the GBA gene. This is found in between 5% and 10% of patients with so-called sporadic disease.</p>
 
+            <h2>Pathophysiology</h2>
+            <p>The two characteristic pathological features of PD are neuronal loss, especially in the pigmented brainstem nuclei, together with the presence of eosinophilic inclusion bodies, called Lewy bodies, in surviving cells. Dopaminergic neurones within the substantia nigra pars compacta, projecting to the striatum, are particularly affected by the disease, leading to a loss of dopamine in the terminal region.</p>
+            <p>There is considerable reserve in this pathway, and a loss of more than 50% of nigral neurones occurs before overt motor features appear. The identification of Lewy bodies in other areas of the central nervous system (CNS) means that dopamine is not the only neurotransmitter system affected, and all of this correlates with the increasing recognition of the range of other clinical features seen in the course of the disease, some of which even precede the development of the motor phenotype.</p>
+            <p>Indeed, neuropathologically, the Braak hypothesis proposes that α-synuclein may first accumulate in the dorsal vagal nucleus of the lower brainstem and then gradually ascend rostrally to affect critical brain regions including the substantia nigra and ultimately the cerebral cortex <span class="citation">(Braak et al., 2003)</span>. If true, this would suggest that prior to the loss of dopamine cells, other cell populations should be affected, resulting in changes in bowel control, mood, sleep and locomotion, all of which would fit with the prodromal features that many patients with PD report. In addition there is early pathology in the olfactory bulb which may also account for the loss of sense of smell that many patients experience ahead of them developing overt motor problems.</p>
+            <p>All of this not only accounts for the features of prodromal PD, but also the deficits that are reported as the disease evolves and which typically do not respond to dopaminergic replacement therapies.</p>
+
+            <h2>Clinical Features</h2>
+
+            <h3>Motor Features</h3>
+            <p>A prerequisite feature for a diagnosis of PD is the presence of <strong>bradykinesia</strong>. This is the slowness of initiation of voluntary movement, with progressive reduction in speed of repetitive actions. The other cardinal features of the disease are tremor when at rest (pill-rolling tremor), postural instability and cogwheel rigidity. Cogwheel rigidity describes the jerky resistance when limbs are moved. These are listed in most diagnostic guidelines for PD.</p>
+            <p>The disease presents asymmetrically and patients continue to report a ‘bad side’ as the disease progresses, although pure unilateral disease is rare, and usually raises concerns that some other disease process is occurring if this is the case. It is important to note, however, that many patients (15–20%) never really develop a tremor, whereas up to 60% of people with PD may have a dominant postural tremor (tremor-dominant), worse with the arms held outstretched, which can cause diagnostic confusion with essential tremor (ET).</p>
+            <p>Postural instability is an important milestone in PD, and typically more than half of patients will reach this stage within 10 years of diagnosis. This problem comprises an impairment of righting reflexes, which leads to impaired gait and increased risk of falling.</p>
+            <p>Patients typically display a characteristic stooped posture and loss of arm swing when walking, which is often a very helpful early diagnostic sign when seeing patients for the first time. There is reduced blink frequency and facial expression (hypomimia), which, together with a low-volume (hypophonic), monotonous speech, may lead to significant difficulties in communication. All of this can easily be misdiagnosed as depression. Writing becomes small (micrographia) and barely legible, with the words falling off the line as the patient continues to write.</p>
+
+            <h3>Non-motor Features</h3>
+            <p>A range of non-motor features encompassing autonomic, cognitive and psychiatric problems are seen in nearly all cases of PD and have a pronounced effect on quality of life. They can precede disease onset and tend to become more prominent as the condition evolves.</p>
+            <p>Common <strong>autonomic problems</strong> include postural hypotension (falling blood pressure on standing) which may contribute to falls and blackouts later in the disease course and is a leading cause of hospitalisation for patients with PD. Constipation can be an ongoing problem that may precede the diagnosis of PD by up to 20 years and relates possibly to pathology in the enteric nervous system.</p>
+            <p>In terms of <strong>psychiatric problems</strong>, depression affects approximately 40% of patients and is a major determinant of both carer stress and nursing home placement. Paranoia and hallucinations occur in many patients typically as a prelude of the dementia, but often are provoked and worsened by dopaminergic and related drugs used to treat PD. In addition some of the dopaminergic agonists can induce major behavioural problems in some patients, especially young male patients with PD.</p>
+            <p><strong>Cognitive impairment</strong> at a very mild level is now thought to be present in many patients at diagnosis. However, the development of a frank dementia tends to occur later on in the disease course and is especially related to the age of the patient at disease onset. Younger onset patients may show cognitive impairment but evolve to a dementia at a slower rate compared with older patients. Longitudinal community-based studies indicate that dementia may ultimately develop in 80% of people with PD <span class="citation">(Hely et al., 2008)</span>. The cognitive impairment that defines the dementia is often associated with the symptoms of hallucinations that are typically visual with delusional misinterpretation, including paranoid ideation, and rapid fluctuations in attention.</p>
+            <p>Finally many patients complain of <strong>sleep problems</strong>, with the major one being a REM sleep behavioural disorder that can occur ahead of the diagnosis of PD. This condition is characterised by patients acting out their dreams. In addition many patients complain of a restless leg syndrome and limb pain.</p>
+
+            <h2>Differential Diagnosis</h2>
+            <p>Although PD is a common form of Parkinsonism, there are numerous other diseases that present with Parkinsonism. A detailed description of these different causes is beyond the scope of this chapter, but a few points should be highlighted. <strong>Essential Tremor (ET)</strong> is a common condition but does not cause bradykinesia. Nevertheless, it may be very difficult to differentiate from tremor-dominant PD. In about 50% of cases of ET there is a positive family history and in a similar number a good response to a low dose of alcohol. If there are doubts, some form of nuclear medicine imaging looking at dopamine in the brain can help distinguish tremulous PD from ET.</p>
+            <p>Several clinical and clinicopathological series have highlighted the problems in making a correct diagnosis of PD. If clinical criteria, such as those produced by the UK Parkinson’s Disease Brain Bank, are not applied, then the error rate (false-negative diagnosis) may be as high as 25–30%. The common conditions misdiagnosed as PD, outside of ET or dystonic tremor, are other neurodegenerative disorders such as progressive supranuclear palsy, MSA and corticobasal degeneration, as well as small vessel disease affecting the brain.</p>
+
+            <h3>Drug-induced Parkinsonism</h3>
+            <p>An important differential diagnosis to consider when a patient presents with Parkinsonism is whether their symptoms and signs may be drug induced. This is because drug-induced Parkinsonism is potentially reversible upon cessation of the drug.</p>
+            <p>Reports linking drug-induced Parkinsonism with the neuroleptic chlorpromazine were first published in the 1950s. Since then, numerous other agents have been associated with it. Many of these are widely recognised, although others are not. Repeat prescription of vestibular sedatives and antiemetics such as prochlorperazine and cinnarizine are the most commonly encountered causes of drug-induced Parkinsonism. The pathogenesis of drug-induced Parkinsonism is likely due to dopamine receptor blockade, but only in part because there is no clear correlation in incidence and severity with the drug dosage and length of exposure. Sodium valproate is also now recognised to cause an encephalopathy dominated by Parkinsonism and cognitive impairment which is reversible upon drug cessation.</p>
+        </div>
     </div>
 
 <script>
-    // --- Collapsible Script ---
+    // --- Collapsible Script (Kept for compatibility, though not used in article body) ---
     var coll = document.getElementsByClassName("collapsible");
     for (var i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-
             if (content.style.maxHeight) {
-                // To close the collapsible and all its open children
                 content.style.maxHeight = null;
             } else {
-                // To open the collapsible, calculate its own scrollHeight
                 content.style.maxHeight = content.scrollHeight + "px";
             }
-
-            // --- Update parent collapsibles' height ---
-            // This part ensures that when a nested collapsible is opened/closed,
-            // its parent's maxHeight is adjusted to fit the new total height.
             let parent = this.parentElement.closest('.content');
             while (parent) {
-                // Recalculate the parent's scrollHeight plus the maxHeight of its open children
                 let newMaxHeight = parent.scrollHeight;
                 let openChildren = parent.querySelectorAll('.content');
                 openChildren.forEach(child => {
                     if (child.style.maxHeight) {
-                        // The scrollHeight of the child itself is already part of the parent's scrollHeight
-                        // We just need to add its content's height
                         newMaxHeight += parseInt(child.style.maxHeight.replace("px", ""));
                     }
                 });
-
                 parent.style.maxHeight = newMaxHeight + 'px';
                 parent = parent.parentElement.closest('.content');
             }
         });
     }
-
 
     // --- Navbar Scroll Script ---
     const navbar = document.querySelector('.navbar');
@@ -140,12 +289,10 @@
         lastScrollY = window.scrollY;
     });
 
-
     // --- Theme Switcher Script ---
     const themeSwitch = document.querySelector('#checkbox');
     const currentTheme = localStorage.getItem('theme');
 
-    // Set default theme to 'dark' if none is stored
     if (!currentTheme) {
         localStorage.setItem('theme', 'dark');
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -155,7 +302,6 @@
             themeSwitch.checked = true;
         }
     }
-
 
     function switchTheme(e) {
         if (e.target.checked) {
