@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1324510872881128"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1324510872881128" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VD1VSYT5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-V5VD1VSYT5');
     </script>
     <!-- Google Tag Manager -->
@@ -19,21 +17,21 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KJR6Q87B');</script>
     <!-- End Google Tag Manager -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Parkinson’s Disease - Krok World</title>
+    <title>Neurology & Psychiatry - Krok World</title>
     <link rel="stylesheet" href="index.css">
     
-    <!-- Custom Styles for the Article Content to match Krok World Theme -->
     <style>
-        /* Article Container */
         .article-content {
             background-color: var(--content-bg);
             padding: 30px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Better for reading long text */
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            margin-bottom: 50px;
         }
 
         .article-content h1 {
@@ -41,12 +39,12 @@
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 15px;
             margin-bottom: 10px;
-            font-family: "Consolas", sans-serif; /* Keep headers consistent with site theme */
+            font-family: "Consolas", sans-serif;
         }
 
         .article-content h2 {
             color: var(--text-color);
-            margin-top: 30px;
+            margin-top: 35px;
             margin-bottom: 15px;
             border-left: 4px solid var(--brand-color);
             padding-left: 10px;
@@ -73,7 +71,6 @@
             display: block;
         }
 
-        /* Key Points Box */
         .key-points {
             background-color: var(--collapsible-bg);
             border: 1px solid var(--border-color);
@@ -82,17 +79,15 @@
             margin-bottom: 30px;
         }
 
-        .key-points ul {
+        .key-points ul, .article-content ul {
             padding-left: 20px;
-            list-style-type: disc; /* Override list-style-type: none from index.css */
-        }
-        
-        .key-points li {
-            margin-bottom: 10px;
             list-style-type: disc;
         }
+        
+        .key-points li, .article-content li {
+            margin-bottom: 10px;
+        }
 
-        /* Figure Box */
         .figure-box {
             background-color: var(--nav-bg-color);
             border: 1px solid var(--border-color);
@@ -107,7 +102,6 @@
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 10px;
             margin-top: 15px;
-            margin-bottom: 15px;
         }
 
         .process-item {
@@ -117,36 +111,32 @@
             border: 1px solid var(--border-color);
             text-align: center;
             border-radius: 3px;
-            transition: background 0.3s;
-        }
-        
-        .process-item:hover {
-            background: var(--collapsible-hover-bg);
         }
 
         .citation {
-            font-size: 0.9em;
+            font-size: 0.85em;
             opacity: 0.7;
+            font-style: italic;
         }
 
-        strong {
-            color: var(--brand-color);
+        strong { color: var(--brand-color); }
+
+        .guideline-box {
+            border: 1px dashed var(--brand-color);
+            padding: 15px;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.02);
         }
     </style>
-
 </head>
-<body data-theme="dark"> <!-- Default theme is dark -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
+<body data-theme="dark">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJR6Q87B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="navbar">
         <a href="index.html" class="brand notranslate">KrokWorld</a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="Guide.html">Guide</a>
@@ -161,166 +151,188 @@
     </nav>
 
     <div class="main-content">
-        <!-- Navigation Back Button (Optional) -->
         <a href="main.html" style="color: var(--brand-color); text-decoration: none; margin-bottom: 20px; display: inline-block;">&larr; Back to Bases</a>
 
+        <!-- ARTICLE 1: PARKINSON’S DISEASE -->
         <div class="article-content">
             <h1>Parkinson’s Disease</h1>
-            <span class="authors"></span>
+            <span class="authors">Therapeutics Core Knowledge</span>
 
-            <!-- Key Points Section -->
             <div class="key-points">
                 <h3>Key Points</h3>
                 <ul>
-                    <li>Parkinson’s disease is the second most common neurodegenerative disease, affecting 1% of the population older than 65 years.</li>
-                    <li>Parkinson’s disease is characterised by bradykinesia, resting tremor, rigidity and, later in the disease course, postural instability.</li>
-                    <li>A range of non-motor features including psychiatric, cognitive and autonomic impairments contribute significantly to an impaired quality of life and are present from early in the disease course in many cases.</li>
-                    <li>Neuronal loss in the brainstem (substantia nigra) leads to a profound dopamine deficiency in the striatum. This provides the rationale for dopaminergic replacement therapies, although the pathology is not restricted to this site.</li>
-                    <li>Levodopa, coupled with an amino acid decarboxylase inhibitor, remains the most potent oral treatment for Parkinson’s disease.</li>
-                    <li>End-of-dose wearing off and on–off fluctuations are motor complications synonymous with the ongoing use of levodopa. Despite advances in oral pharmacotherapy, the on–off phenomenon can be difficult to treat effectively.</li>
-                    <li>Other dopaminergic therapies are available for the management of Parkinson’s disease. Dopamine agonists are used, sometimes as first-line therapy, in younger patients, although the increasing recognition of the neuropsychiatric problems that can arise with these agents has reduced their use. It is now therefore recommended that information regarding impulse control disorders is explicitly given to patients when such drugs are used.</li>
-                    <li>Dopamine agonists can also be given as adjunctive therapies to levodopa, when the primary aim is to smooth out motor fluctuations.</li>
-                    <li>Other interventions including surgical treatments of Parkinson’s disease, such as deep brain stimulation of the subthalamic nucleus, are effective in certain patients with marked motor fluctuations.</li>
-                    <li>Advanced Parkinson’s disease is difficult to manage, particularly the emerging dementia and neuropsychiatric problems. Reduction of dopaminergic therapy is the first approach, and rivastigmine and other cholinesterase inhibitors may be useful for the dementia associated with Parkinson’s disease.</li>
+                    <li>Parkinson’s disease (PD) is the second most common neurodegenerative disease, affecting 1% of the population over 65.</li>
+                    <li>Characterised by bradykinesia, resting tremor, rigidity and postural instability.</li>
+                    <li>Non-motor features (psychiatric, cognitive, autonomic) contribute significantly to impaired quality of life.</li>
+                    <li>Neuronal loss in the substantia nigra leads to dopamine deficiency in the striatum.</li>
+                    <li>Levodopa remains the most potent oral treatment, though motor fluctuations (on–off) occur with long-term use.</li>
+                    <li>Dopamine agonists are alternatives, but carry risks of impulse control disorders.</li>
                 </ul>
             </div>
 
-            <!-- Figure Representation -->
             <div class="figure-box">
-                <span style="display:block; margin-bottom:10px; font-weight:bold; color:var(--brand-color);">Fig. 32.1 Summary of pathophysiological processes considered to be central to Parkinson’s disease:</span>
+                <span style="font-weight:bold; color:var(--brand-color);">Fig. 32.1 Summary of Pathophysiological Processes:</span>
                 <div class="process-grid">
                     <div class="process-item">Ageing</div>
                     <div class="process-item">Genetic factors</div>
-                    <div class="process-item">Altered UPS processing</div>
                     <div class="process-item">Oxidative stress</div>
-                    <div class="process-item">Lysosome-autophagy pathway</div>
-                    <div class="process-item">Environmental factors</div>
-                    <div class="process-item">Mitochondrial dysfunction / mitophagy</div>
                     <div class="process-item">Protein aggregation</div>
-                    <div class="process-item">Prion-like transmission</div>
-                    <div class="process-item">Synaptic dysfunction</div>
+                    <div class="process-item">Mitochondrial dysfunction</div>
                     <div class="process-item">Inflammation</div>
-                    <div class="process-item">Impaired protein/membrane trafficking</div>
+                    <div class="process-item">Synaptic dysfunction</div>
+                    <div class="process-item">Impaired trafficking</div>
                 </div>
-                <p style="text-align: center; margin-top: 15px; border-top: 1px solid var(--border-color); padding-top:10px;">
-                    <strong>Result: CELL DEATH</strong><br>
-                    <small>UPS: Ubiquitin proteasome system.</small>
-                </p>
+                <p style="text-align: center; margin-top: 15px; border-top: 1px solid var(--border-color); padding-top:10px;"><strong>Result: CELL DEATH</strong></p>
             </div>
 
-            <h2>Environment</h2>
-            <p>The relevance of environmental factors came to the fore in the 1980s, when drug addicts attempting to manufacture pethidine accidently produced a toxin called MPTP (1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine). The severe Parkinsonian state induced by inhalation or injection of the toxin produced a clinical syndrome that was indistinguishable from advanced PD. Similarities in the structure of MPTP to the commonly used herbicide paraquat opened up exploration of the role of chemicals used in the agricultural industry.</p>
-            <p>Pesticide exposure, rural living, agricultural occupation and well water drinking alongside head injury are all associated with an increased risk of development of PD. Conversely, tobacco smoking, coffee drinking, non-steroidal anti-inflammatory drug use, calcium channel blocker use and alcohol consumption have all been linked to a reduced risk of the disease <span class="citation">(Bellou et al., 2016)</span>.</p>
-
-            <h2>Genetics</h2>
-            <p>Single monogenic causes for PD account for a very small number of patients. The first gene of this nature to be discovered was that encoding a mutation in the synaptic protein α-synuclein <span class="citation">(Polymeropoulos et al., 1997)</span>. Shortly after its identification as the causative gene in this familial form of PD, it was found to be the major component of the intracellular protein accumulations, Lewy bodies that characterise sporadic disease <span class="citation">(Spillantini et al., 1997)</span>. This highlighted that this protein was central to what goes wrong in all cases of PD and was not just the preserve of a rare familial form of the condition.</p>
-            <p>Since this discovery, duplication and triplication in the α-synuclein gene, as well as further mutations in it along with mutations in many other genes, have been found to contribute to familial forms of the disease. However, the phenotypic nature of these forms of Parkinsonism is often different from idiopathic disease, causing atypical or early onset forms of the disease, with the exception of the LRRK2 families.</p>
-            <p>Although these genes form very much the minority of cases, there is nevertheless clear genetic risk of the development of PD, as is evidenced by recent large genome-wide associated studies <span class="citation">(Bras et al., 2015; Edwards et al., 2011)</span>. This has revealed a large number of genetic loci linked to an increased risk of development of the disorder.</p>
-            <p>More recently, through careful clinical observation in Gaucher’s disease families, it was recognised that one of the strongest genetic risk factors is a heterozygous mutation in the GBA gene. This is found in between 5% and 10% of patients with so-called sporadic disease.</p>
+            <h2>Environment & Genetics</h2>
+            <p>Environmental factors like pesticide exposure, rural living, and well water drinking are associated with increased PD risk. Conversely, tobacco smoking and coffee drinking have been linked to a reduced risk <span class="citation">(Bellou et al., 2016)</span>. Genetics play a role in a minority of cases, with mutations in the <strong>α-synuclein</strong> and <strong>GBA</strong> genes being strong risk factors.</p>
 
             <h2>Pathophysiology</h2>
-            <p>The two characteristic pathological features of PD are neuronal loss, especially in the pigmented brainstem nuclei, together with the presence of eosinophilic inclusion bodies, called Lewy bodies, in surviving cells. Dopaminergic neurones within the substantia nigra pars compacta, projecting to the striatum, are particularly affected by the disease, leading to a loss of dopamine in the terminal region.</p>
-            <p>There is considerable reserve in this pathway, and a loss of more than 50% of nigral neurones occurs before overt motor features appear. The identification of Lewy bodies in other areas of the central nervous system (CNS) means that dopamine is not the only neurotransmitter system affected, and all of this correlates with the increasing recognition of the range of other clinical features seen in the course of the disease, some of which even precede the development of the motor phenotype.</p>
-            <p>Indeed, neuropathologically, the Braak hypothesis proposes that α-synuclein may first accumulate in the dorsal vagal nucleus of the lower brainstem and then gradually ascend rostrally to affect critical brain regions including the substantia nigra and ultimately the cerebral cortex <span class="citation">(Braak et al., 2003)</span>. If true, this would suggest that prior to the loss of dopamine cells, other cell populations should be affected, resulting in changes in bowel control, mood, sleep and locomotion, all of which would fit with the prodromal features that many patients with PD report. In addition there is early pathology in the olfactory bulb which may also account for the loss of sense of smell that many patients experience ahead of them developing overt motor problems.</p>
-            <p>All of this not only accounts for the features of prodromal PD, but also the deficits that are reported as the disease evolves and which typically do not respond to dopaminergic replacement therapies.</p>
+            <p>PD is defined by neuronal loss in the substantia nigra and the presence of <strong>Lewy bodies</strong> (eosinophilic inclusion bodies). The Braak hypothesis proposes that α-synuclein pathology may start in the lower brainstem (dorsal vagal nucleus) or olfactory bulb, explaining why sense of smell and bowel issues often precede motor symptoms.</p>
 
             <h2>Clinical Features</h2>
-
             <h3>Motor Features</h3>
-            <p>A prerequisite feature for a diagnosis of PD is the presence of <strong>bradykinesia</strong>. This is the slowness of initiation of voluntary movement, with progressive reduction in speed of repetitive actions. The other cardinal features of the disease are tremor when at rest (pill-rolling tremor), postural instability and cogwheel rigidity. Cogwheel rigidity describes the jerky resistance when limbs are moved. These are listed in most diagnostic guidelines for PD.</p>
-            <p>The disease presents asymmetrically and patients continue to report a ‘bad side’ as the disease progresses, although pure unilateral disease is rare, and usually raises concerns that some other disease process is occurring if this is the case. It is important to note, however, that many patients (15–20%) never really develop a tremor, whereas up to 60% of people with PD may have a dominant postural tremor (tremor-dominant), worse with the arms held outstretched, which can cause diagnostic confusion with essential tremor (ET).</p>
-            <p>Postural instability is an important milestone in PD, and typically more than half of patients will reach this stage within 10 years of diagnosis. This problem comprises an impairment of righting reflexes, which leads to impaired gait and increased risk of falling.</p>
-            <p>Patients typically display a characteristic stooped posture and loss of arm swing when walking, which is often a very helpful early diagnostic sign when seeing patients for the first time. There is reduced blink frequency and facial expression (hypomimia), which, together with a low-volume (hypophonic), monotonous speech, may lead to significant difficulties in communication. All of this can easily be misdiagnosed as depression. Writing becomes small (micrographia) and barely legible, with the words falling off the line as the patient continues to write.</p>
-
+            <p><strong>Bradykinesia</strong> (slowness of movement) is a prerequisite for diagnosis. Other cardinal signs are a pill-rolling <strong>resting tremor</strong>, <strong>cogwheel rigidity</strong>, and <strong>postural instability</strong>. Patients often show a stooped posture, reduced arm swing, and <strong>micrographia</strong> (small handwriting).</p>
+            
             <h3>Non-motor Features</h3>
-            <p>A range of non-motor features encompassing autonomic, cognitive and psychiatric problems are seen in nearly all cases of PD and have a pronounced effect on quality of life. They can precede disease onset and tend to become more prominent as the condition evolves.</p>
-            <p>Common <strong>autonomic problems</strong> include postural hypotension (falling blood pressure on standing) which may contribute to falls and blackouts later in the disease course and is a leading cause of hospitalisation for patients with PD. Constipation can be an ongoing problem that may precede the diagnosis of PD by up to 20 years and relates possibly to pathology in the enteric nervous system.</p>
-            <p>In terms of <strong>psychiatric problems</strong>, depression affects approximately 40% of patients and is a major determinant of both carer stress and nursing home placement. Paranoia and hallucinations occur in many patients typically as a prelude of the dementia, but often are provoked and worsened by dopaminergic and related drugs used to treat PD. In addition some of the dopaminergic agonists can induce major behavioural problems in some patients, especially young male patients with PD.</p>
-            <p><strong>Cognitive impairment</strong> at a very mild level is now thought to be present in many patients at diagnosis. However, the development of a frank dementia tends to occur later on in the disease course and is especially related to the age of the patient at disease onset. Younger onset patients may show cognitive impairment but evolve to a dementia at a slower rate compared with older patients. Longitudinal community-based studies indicate that dementia may ultimately develop in 80% of people with PD <span class="citation">(Hely et al., 2008)</span>. The cognitive impairment that defines the dementia is often associated with the symptoms of hallucinations that are typically visual with delusional misinterpretation, including paranoid ideation, and rapid fluctuations in attention.</p>
-            <p>Finally many patients complain of <strong>sleep problems</strong>, with the major one being a REM sleep behavioural disorder that can occur ahead of the diagnosis of PD. This condition is characterised by patients acting out their dreams. In addition many patients complain of a restless leg syndrome and limb pain.</p>
+            <ul>
+                <li><strong>Autonomic:</strong> Postural hypotension and chronic constipation.</li>
+                <li><strong>Psychiatric:</strong> Depression (40% of patients), paranoia, and hallucinations (often drug-induced).</li>
+                <li><strong>Cognitive:</strong> Dementia develops in up to 80% of patients long-term <span class="citation">(Hely et al., 2008)</span>.</li>
+                <li><strong>Sleep:</strong> REM sleep behavioural disorder (acting out dreams).</li>
+            </ul>
 
             <h2>Differential Diagnosis</h2>
-            <p>Although PD is a common form of Parkinsonism, there are numerous other diseases that present with Parkinsonism. A detailed description of these different causes is beyond the scope of this chapter, but a few points should be highlighted. <strong>Essential Tremor (ET)</strong> is a common condition but does not cause bradykinesia. Nevertheless, it may be very difficult to differentiate from tremor-dominant PD. In about 50% of cases of ET there is a positive family history and in a similar number a good response to a low dose of alcohol. If there are doubts, some form of nuclear medicine imaging looking at dopamine in the brain can help distinguish tremulous PD from ET.</p>
-            <p>Several clinical and clinicopathological series have highlighted the problems in making a correct diagnosis of PD. If clinical criteria, such as those produced by the UK Parkinson’s Disease Brain Bank, are not applied, then the error rate (false-negative diagnosis) may be as high as 25–30%. The common conditions misdiagnosed as PD, outside of ET or dystonic tremor, are other neurodegenerative disorders such as progressive supranuclear palsy, MSA and corticobasal degeneration, as well as small vessel disease affecting the brain.</p>
+            <p><strong>Essential Tremor (ET)</strong> is commonly confused with PD but lacks bradykinesia. Other "Parkinson-plus" syndromes include Progressive Supranuclear Palsy (PSP) and Multiple System Atrophy (MSA). <strong>Drug-induced Parkinsonism</strong> (caused by neuroleptics or antiemetics like prochlorperazine) is potentially reversible.</p>
+        </div>
 
-            <h3>Drug-induced Parkinsonism</h3>
-            <p>An important differential diagnosis to consider when a patient presents with Parkinsonism is whether their symptoms and signs may be drug induced. This is because drug-induced Parkinsonism is potentially reversible upon cessation of the drug.</p>
-            <p>Reports linking drug-induced Parkinsonism with the neuroleptic chlorpromazine were first published in the 1950s. Since then, numerous other agents have been associated with it. Many of these are widely recognised, although others are not. Repeat prescription of vestibular sedatives and antiemetics such as prochlorperazine and cinnarizine are the most commonly encountered causes of drug-induced Parkinsonism. The pathogenesis of drug-induced Parkinsonism is likely due to dopamine receptor blockade, but only in part because there is no clear correlation in incidence and severity with the drug dosage and length of exposure. Sodium valproate is also now recognised to cause an encephalopathy dominated by Parkinsonism and cognitive impairment which is reversible upon drug cessation.</p>
+        <!-- ARTICLE 2: SCHIZOPHRENIA -->
+        <div class="article-content">
+            <h1>Schizophrenia</h1>
+            <span class="authors">Caroline Parker</span>
+
+            <div class="key-points">
+                <h3>Key Points</h3>
+                <ul>
+                    <li>Lifetime prevalence is 1 in 100 people; up to 10% commit suicide.</li>
+                    <li>Positive symptoms (hallucinations, delusions) usually respond to antipsychotics.</li>
+                    <li>Negative symptoms (apathy, social withdrawal) are more resistant to medication.</li>
+                    <li>Second-generation (atypical) antipsychotics generally avoid EPSE but cause weight gain and diabetes.</li>
+                    <li><strong>Clozapine</strong> is the most effective drug but requires mandatory blood monitoring for neutropenia.</li>
+                </ul>
+            </div>
+
+            <h2>Classification & Symptoms</h2>
+            <p>Kraepelin initially called it ‘dementia praecox’. Bleuler later introduced ‘schizophrenia’ to describe the split between emotions and intellect. It is categorized by:</p>
+            <ul>
+                <li><strong>Positive Symptoms:</strong> Hallucinations (mostly auditory), delusions (thought insertion), and thought disorder.</li>
+                <li><strong>Negative Symptoms:</strong> Apathy, social withdrawal, and lack of drive.</li>
+            </ul>
+
+            <h2>Causes & Models</h2>
+            <p>The <strong>Dopamine Hypothesis</strong> suggests overactivity at D2 receptors causes psychosis. The <strong>Developmental Model</strong> points to structural brain abnormalities during fetal development. Environmental triggers include urban living, childhood trauma, and substance misuse.</p>
+
+            <div class="figure-box">
+                <span style="font-weight:bold; color:var(--brand-color);">Fig. 30.1 Classification of Antipsychotics:</span>
+                <div class="process-grid">
+                    <div class="process-item"><strong>First Gen (Typical):</strong> Haloperidol, Chlorpromazine</div>
+                    <div class="process-item"><strong>Second Gen (Atypical):</strong> Olanzapine, Risperidone</div>
+                    <div class="process-item"><strong>Partial Agonist:</strong> Aripiprazole</div>
+                    <div class="process-item"><strong>Refractory Gold Standard:</strong> Clozapine</div>
+                </div>
+            </div>
+
+            <h2>Side Effects</h2>
+            <ul>
+                <li><strong>EPSE:</strong> Parkinsonism, Akathisia (restlessness), and Acute Dystonia (sustained muscle contraction).</li>
+                <li><strong>Tardive Dyskinesia:</strong> Rhythmic involuntary movements of the tongue/face; often irreversible.</li>
+                <li><strong>Metabolic:</strong> Significant weight gain and diabetes risk, especially with Olanzapine and Clozapine.</li>
+                <li><strong>NMS:</strong> Neuroleptic Malignant Syndrome – a serious emergency with fever, rigidity, and autonomic instability.</li>
+            </ul>
+
+            <h2>Clozapine & Refractory Illness</h2>
+            <p>Clozapine is indicated after failing two other antipsychotics. It carries a risk of <strong>agranulocytosis</strong> (low white blood cells) and requires titration to avoid tachycardia and seizures. Augmentation with sulpiride or amisulpride is sometimes used if response is inadequate.</p>
+        </div>
+
+        <!-- ARTICLE 3: EPILEPSY -->
+        <div class="article-content">
+            <h1>Epilepsy</h1>
+            <span class="authors">Gonçalo Cação and Josemir W. Sander</span>
+
+            <div class="key-points">
+                <h3>Key Points</h3>
+                <ul>
+                    <li>An epileptic seizure is a transient paroxysm of uncontrolled neuronal discharges.</li>
+                    <li>Incidence is highest in the first two decades and in late life (due to stroke).</li>
+                    <li>60–70% of people become seizure-free on treatment.</li>
+                    <li><strong>SUDEP:</strong> Sudden unexpected death in epilepsy is a risk for those with frequent convulsions.</li>
+                    <li>Diagnosis is primarily clinical, supported by EEG and MRI.</li>
+                </ul>
+            </div>
+
+            <h2>Pathophysiology</h2>
+            <p>The hallmark is rhythmic, repetitive hyper-synchronous discharge of neurones. These discharges can be localized (focal) or involve the whole cortex (generalised). Neurones switch from normal low-frequency patterns to high-frequency bursts.</p>
+
+            <h2>Clinical Manifestations</h2>
+            <h3>Generalised Seizures</h3>
+            <ul>
+                <li><strong>Tonic-clonic:</strong> Stiffening (tonic) followed by jerking (clonic). Often followed by confusion/sleep.</li>
+                <li><strong>Absence:</strong> Brief (seconds) behavioural arrest/staring; common in children.</li>
+                <li><strong>Myoclonic:</strong> Sudden, brief, shock-like jerks, usually in the morning.</li>
+                <li><strong>Atonic:</strong> Sudden loss of muscle tone causing a "drop attack."</li>
+            </ul>
+
+            <h3>Focal Seizures</h3>
+            <p>Divided into <strong>Focal Aware</strong> and <strong>Focal with Impaired Awareness</strong>. Symptoms depend on the brain area affected (e.g., lip smacking, déjà vu, or localized jerking). These may evolve into bilateral tonic-clonic seizures.</p>
+
+            <div class="guideline-box">
+                <h3>NICE Management Summary (2014)</h3>
+                <p><strong>Emergency Treatment:</strong> <strong>Buccal midazolam</strong> is first-line for prolonged seizures in the community. Rectal diazepam is an alternative. Intravenous lorazepam is used in hospitals.</p>
+                <p><strong>Diagnosis:</strong> Should be made urgently by a specialist. Diagnosis is clinical; EEG classifies the syndrome but does not "prove" epilepsy if the history is weak.</p>
+                <p><strong>Women:</strong> Must receive counseling on contraception (interaction with AEDs) and the risks of sodium valproate in pregnancy.</p>
+            </div>
+
+            <h2>Diagnosis & Treatment</h2>
+            <p><strong>MRI</strong> is essential for identifying structural causes like tumours or cortical dysplasia. <strong>EEG</strong> helps classify the seizure type. Treatment aims for seizure freedom using a single drug (monotherapy) to minimize side effects. If two drugs fail, the patient is considered "refractory" and should be referred for surgery evaluation.</p>
         </div>
     </div>
 
-<script>
-    // --- Collapsible Script (Kept for compatibility, though not used in article body) ---
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+    <script>
+        // Navbar Scroll Script
+        const navbar = document.querySelector('.navbar');
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > navbar.clientHeight) {
+                navbar.classList.add('navbar-scrolled');
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+                navbar.classList.remove('navbar-scrolled');
             }
-            let parent = this.parentElement.closest('.content');
-            while (parent) {
-                let newMaxHeight = parent.scrollHeight;
-                let openChildren = parent.querySelectorAll('.content');
-                openChildren.forEach(child => {
-                    if (child.style.maxHeight) {
-                        newMaxHeight += parseInt(child.style.maxHeight.replace("px", ""));
-                    }
-                });
-                parent.style.maxHeight = newMaxHeight + 'px';
-                parent = parent.parentElement.closest('.content');
-            }
+            lastScrollY = window.scrollY;
         });
-    }
 
-    // --- Navbar Scroll Script ---
-    const navbar = document.querySelector('.navbar');
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > lastScrollY && window.scrollY > navbar.clientHeight) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-        lastScrollY = window.scrollY;
-    });
-
-    // --- Theme Switcher Script ---
-    const themeSwitch = document.querySelector('#checkbox');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (!currentTheme) {
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        if (currentTheme === 'light') {
-            themeSwitch.checked = true;
-        }
-    }
-
-    function switchTheme(e) {
-        if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
+        // Theme Switcher Script
+        const themeSwitch = document.querySelector('#checkbox');
+        const currentTheme = localStorage.getItem('theme');
+        if (!currentTheme) {
             localStorage.setItem('theme', 'dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'light') { themeSwitch.checked = true; }
         }
-    }
+        themeSwitch.addEventListener('change', (e) => {
+            const theme = e.target.checked ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }, false);
+    </script>
 
-    themeSwitch.addEventListener('change', switchTheme, false);
-</script>
-<div class="footer">
-    <a href="insomnia.html" style="color: #cacaca;">Next : Insomnia</a>
-</div>
-<div class="footer">
-    <a href="privacy.html" style="color: red;">Privacy Policy</a>
-</div>
-
+    <div class="footer">
+        <a href="insomnia.html" style="color: #cacaca;">Next : Insomnia</a>
+    </div>
+    <div class="footer">
+        <a href="privacy.html" style="color: red;">Privacy Policy</a>
+    </div>
 </body>
 </html>
